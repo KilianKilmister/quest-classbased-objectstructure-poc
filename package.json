@@ -33,5 +33,5 @@
     "run": "quest-runexample"
   },
   "type": "module",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
