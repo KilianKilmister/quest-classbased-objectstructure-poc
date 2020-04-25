@@ -1,7 +1,1302 @@
 {
+  //"AllAutocomplete.cycleOpenDocumentsOnLaunch": true,
+  //"AllAutocomplete.excludeFiles": "**/node_modules/** **/.*",
+  //"JSON-zain.json.parsing": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.detectIndentation": false,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+      0,
+      80,
+      120
+    ],
+    "editor.trimAutoWhitespace": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "editor.wrappingIndent": "deepIndent",
+    "editor.wrappingStrategy": "simple",
+    "files.trimTrailingWhitespace": false
+  },
+  "auto-correct.dictionary": [
+    {
+      "languages": [
+        "*"
+      ],
+      "useLargeList": false,
+      "words": {}
+    },
+    {
+      "languages": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+      "words": {
+        "cosnt": "const",
+        "functoin": "function"
+      }
+    }
+  ],
+  "autoimport.autoComplete": false,
+  "autoimport.semicolon": false,
+  "autoimport.spaceBetweenBraces": false,
+  "bashIde.explainshellEndpoint": "https://explainshell.com",
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [],
+  "bracket-pair-colorizer-2.activeScopeCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}",
+    "opacity: 0.5"
+  ],
+  "bracket-pair-colorizer-2.colorMode": "Independent",
+  "bracket-pair-colorizer-2.colors": [
+    "#5fb3b3",
+    "#c5a5c5",
+    "#5a9bcf",
+    "#fac863",
+    "#0BACCA",
+    "#00DEAD",
+    "#BBACCA",
+    "#FEED",
+  ],
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.rulerPosition": "Right",
+  "bracket-pair-colorizer-2.unmatchedScopeColor": "white",
+  "breadcrumbs.symbolPath": "last",
+  "cSpell.enableFiletypes": [
+    "fish",
+    "log"
+  ],
+  "cSpell.language": "en,en-US",
+  "cSpell.userWords": [
+    "Kilian",
+    "cleaup",
+    "esnext",
+    "hefti",
+    "intit",
+    "shortflags",
+    "stylesheet"
+  ],
+  "checkpoints.askForCheckpointName": false,
+  "checkpoints.location": "scm",
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMapByFileExtension": {
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".cr": "crystal",
+    ".csproj": "dotnet run --project",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".dart": "dart",
+    ".exs": "elixir",
+    ".fsproj": "dotnet run --project",
+    ".hs": "runhaskell",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".jl": "julia",
+    ".kit": "kitc --run",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".lisp": "sbcl --script",
+    ".ml": "ocaml",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".rkt": "racket",
+    ".sass": "sass --style expanded",
+    ".scala": "scala",
+    ".scm": "csi -script",
+    ".v": "v run",
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".vsh": "v run"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "color-highlight.markRuler": false,
+  "color-highlight.markerType": "underline",
+  "color-highlight.matchWords": true,
+  "colorTabs.activityBarBackground": false,
+  "colorTabs.config": [
+    {
+      "color": "#bbdd00",
+      "regex": "\\.(c|m)?js$"
+    },
+    {
+      "color": "#888800",
+      "regex": "(?<!package)\\.json$"
+    },
+    {
+      "color": "#0055aa",
+      "regex": ".*\\.ts$"
+    },
+    {
+      "color": "#cc2222",
+      "regex": ".*package(?:-lock)?\\.json$"
+    },
+    {
+      "color": "#886633",
+      "regex": "\\.md$"
+    },
+    {
+      "color": "#008800",
+      "regex": "\\.log$"
+    },
+    {
+      "color": "#cccccc",
+      "regex": "\\LICENSE$"
+    },
+    {
+      "color": "#aaaaaa",
+      "regex": "\\|.[^.]*$"
+    }
+  ],
+  "colorTabs.ignoreCase": true,
+  "colorTabs.titleBackground": true,
+  "colorTabs.titleLabel": true,
+  "commentAnchors.parseDelay": 100,
+  "commentAnchors.scrollPosition": "center",
+  "commentAnchors.tags.list": [
+    {
+      "highlightColor": "#77CCFF",
+      "iconColor": "default",
+      "isItalic": false,
+      "scope": "file",
+      "tag": "INFO"
+    },
+    {
+      "borderRadius": 10,
+      "highlightColor": "#A8C023",
+      "iconColor": "default",
+      "scope": "file",
+      "tag": "ANCHOR"
+    },
+    {
+      "borderRadius": 10,
+      "borderStyle": "1px solid #c554",
+      "highlightColor": "#c557",
+      "iconColor": "default",
+      "isBold": false,
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "DEPRICATE"
+    },
+    {
+      "borderRadius": 10,
+      "borderStyle": "1px solid #fc05",
+      "highlightColor": "orange",
+      "iconColor": "orange",
+      "isItalic": false,
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "TODO"
+    },
+    {
+      "borderRadius": 5,
+      "borderStyle": "1px solid #F4433688",
+      "highlightColor": "#F44336",
+      "iconColor": "red",
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "FIXME"
+    },
+    {
+      "highlightColor": "#BA68C8",
+      "iconColor": "purple",
+      "isBold": false,
+      "scope": "file",
+      "tag": "STUB"
+    },
+    {
+      "borderRadius": 10,
+      "highlightColor": "#ffaa",
+      "iconColor": "yellow",
+      "isItalic": false,
+      "scope": "file",
+      "styleComment": false,
+      "tag": "NOTE"
+    },
+    {
+      "borderRadius": 10,
+      "borderStyle": "1px solid #44cc5588",
+      "highlightColor": "#44cc55",
+      "iconColor": "green",
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "REVIEW"
+    },
+    {
+      "borderRadius": 10,
+      "borderStyle": "1px solid #896afc33",
+      "highlightColor": "#896afc88",
+      "iconColor": "blurple",
+      "isBold": false,
+      "isRegion": true,
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "SECTION"
+    },
+    {
+      "borderRadius": 10,
+      "borderStyle": "1px solid #3ea8ff88",
+      "highlightColor": "#3ea8ff",
+      "iconColor": "blue",
+      "isBold": false,
+      "isRegion": true,
+      "scope": "workspace",
+      "styleComment": true,
+      "tag": "sREVIEW"
+    }
+  ],
+  "commentAnchors.tags.matchCase": true,
+  "commentAnchors.tags.provideAutoCompletion": true,
+  "commentAnchors.tags.rulerStyle": "left",
+  "commentAnchors.tags.separators": [
+    ": ",
+    "- ",
+    "-",
+    "  "
+  ],
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,dist,out,vendor,.cache,.ref}/**/*",
+  "commentAnchors.workspace.lazyLoad": false,
+  "commentAnchors.workspace.matchFiles": "**/*/*",
+  "comments.openPanel": "openOnSessionStart",
+  "customcoloring.buttons.showProfileCycleButtons": false,
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.titleBar": "regular",
+  "cwtools.cache.stellaris": "D:\\SteamLibrary\\steamapps\\common\\Stellaris",
+  "cwtools.debug_mode": true,
+  "cwtools.errors.ignorefiles": [
+    "README.txt",
+    "credits.txt",
+    "credits_l_simp_chinese.txt",
+    "reference.txt",
+    "startup_info.txt",
+    "SKU_NotebadAndPastbin.txt"
+  ],
+  "cwtools.errors.vanilla": false,
+  "cwtools.ignore_patterns": [
+    "**/DOC_*",
+    "**/.rtf"
+  ],
+  "cwtools.trace.server": "messages",
+  "dashboard.customCss": "",
+  "dashboard.customProjectCardBackground": "",
+  "dashboard.customProjectNameColor": "",
+  "dashboard.customProjectPathColor": "",
+  "dashboard.projectData": null,
+  "debug.inlineValues": true,
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "debug.javascript.usePreview": true,
+  "debug.node.autoAttach": "on",
+  "editor.colorDecorators": false,
+  "editor.columnSelection": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.cursorWidth": 3,
+  "editor.detectIndentation": false,
+  "editor.dragAndDrop": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.find.globalFindClipboard": true,
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "300",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.hover.delay": 300,
+  "editor.hover.sticky": false,
+  "editor.letterSpacing": 1,
+  "editor.lineNumbers": "interval",
+  "editor.matchBrackets": false,
+  "editor.maxTokenizationLineLength": 200000,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.scale": 2,
+  "editor.mouseWheelZoom": true,
+  "editor.multiCursorMergeOverlapping": false,
+  "editor.peekWidgetDefaultFocus": "editor",
+  "editor.renameOnType": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    0,
+    40,
+    80,
+    160
+  ],
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.maxVisibleSuggestions": 6,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.statusBar.visible": true,
+  "editor.suggestFontSize": 14,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wrappingStrategy": "simple",
+  "emeraldwalk.runonsave": {},
+  "errorLens.addAnnotationTextPrefixes": true,
+  "errorLens.annotationPrefix": [
+    "❌",
+    "⚠",
+    "ℹ"
+  ],
+  "errorLens.delay": 300,
+  "errorLens.editorActiveTabDecorationEnabled": true,
+  "errorLens.exclude": [],
+  "errorLens.fontSize": "12",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.gutterIconSize": "75%",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.margin": "300px",
+  "es6-css-minify.genJSmap": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.debug": true,
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.lintTask.options": "/.",
+  "eslint.migration.2_x": "off",
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "json"
+  ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 5,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.associations": {
+    "*.jsdoc": "json",
+    "*.schema": "json",
+    "*.tslog": "javascript",
+    ".*rc": "json",
+    ".mdlintrc": "json",
+    ".myrc": "fish",
+    ".noderc": "fish",
+    ".zshrc": "shellscript"
+  },
+  "files.autoGuessEncoding": true,
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 1000,
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/*SC.yml": true,
+    "**/.git": false,
+    "**/localisation/braz_por,french,german,simp_chinese,russian,polish,spanish/**": true,
+    "**/pdx_launcher": true,
+    "**/pdx_online_assets": true
+  },
+  "files.hotExit": "onExitAndWindowClose",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**.npm_global": true,
+    "**/.cashe/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.npm": true,
+    "**/node_modules/**": true
+  },
+  "genGetSet.scanOnSave": true,
+  "genGetSet.spacedImportLine": true,
+  "git-graph.showUncommittedChanges": false,
+  "git.alwaysSignOff": true,
+  "git.autoStash": true,
+  "git.autofetch": true,
+  "git.defaultCloneDirectory": "C:\\Users\\Kilian\\Documents\\Repos\\DefaultClone",
+  "git.enableSmartCommit": true,
+  "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
+  "gitProjectManager.baseProjectsFolders": [
+    "/Users/kilian/dev"
+  ],
+  "githubPullRequests.logLevel": "debug",
+  "githubPullRequests.showInSCM": true,
+  "gitlens.advanced.messages": {
+    "suppressFileNotUnderSourceControlWarning": true
+  },
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.codeLens.scopes": [
+    "document"
+  ],
+  "gitlens.currentLine.dateFormat": "DoMM",
+  "gitlens.currentLine.format": "${author|6?}, ${agoOrDate} • ${message|20?}",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "gitlens.heatmap.ageThreshold": "10",
+  "gitlens.heatmap.toggleMode": "window",
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.mode.active": "SK",
+  "gitlens.mode.statusBar.alignment": "left",
+  "gitlens.modes": {
+    "SK": {
+      "annotations": "heatmap",
+      "codeLens": true,
+      "currentLine": false,
+      "description": "personal",
+      "hovers": false,
+      "name": "SK",
+      "statusBar": true,
+      "statusBarItemName": "gl.mode:SK"
+    },
+    "review": {
+      "codeLens": true,
+      "currentLine": true,
+      "description": "for reviewing code, enables many visual features",
+      "hovers": true,
+      "name": "Review",
+      "statusBarItemName": "Reviewing"
+    },
+    "zen": {
+      "codeLens": false,
+      "currentLine": false,
+      "description": "for a zen-like experience, disables many visual features",
+      "hovers": false,
+      "name": "Zen",
+      "statusBar": false,
+      "statusBarItemName": "Zen"
+    }
+  },
+  "gitlens.outputLevel": "verbose",
+  "gitlens.recentChanges.highlight.locations": [
+    "gutter",
+    "overview"
+  ],
+  "gitlens.views.repositories.files.layout": "tree",
+  "guides.active.color.dark": "#5cf6",
+  "guides.active.gutter": true,
+  "guides.active.style": "double",
+  "guides.active.width": 3,
+  "guides.indent.backgrounds": [
+    "#2288aa07",
+    "#aa882207"
+  ],
+  "guides.limit.maximum": 100,
+  "guides.normal.color.dark": "#5882",
+  "guides.normal.style": "dotted",
+  "guides.normal.width": 1,
+  "guides.stack.color.dark": "#58f3",
+  "guides.stack.style": "dotted",
+  "guides.stack.width": 2,
+  "guides.updateDelay": 0.3,
+  "highlight.maxMatches": 20,
+  "html.format.endWithNewline": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.maxPreserveNewLines": 1,
+  "javascript.format.enable": false,
+  "javascript.format.insertSpaceAfterCommaDelimiter": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "javascript.format.semicolons": "remove",
+  "javascript.implicitProjectConfig.checkJs": false,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/**/.angular-cli.json"
+      ],
+      "url": "https://raw.githubusercontent.com/angular/angular-cli/master/packages/@angular/cli/lib/config/schema.json"
+    },
+    {
+      "fileMatch": [
+        "/**/apple-app-site-association"
+      ],
+      "url": "http://json.schemastore.org/apple-app-site-association"
+    },
+    {
+      "fileMatch": [
+        "/**/babelrc.json",
+        "/**/.babelrc"
+      ],
+      "url": "http://json.schemastore.org/babelrc"
+    },
+    {
+      "fileMatch": [
+        "/**/.bootstraprc"
+      ],
+      "url": "http://json.schemastore.org/bootstraprc"
+    },
+    {
+      "fileMatch": [
+        "/**/bower.json"
+      ],
+      "url": "http://json.schemastore.org/bower"
+    },
+    {
+      "fileMatch": [
+        "/**/.bowerrc"
+      ],
+      "url": "http://json.schemastore.org/bowerrc"
+    },
+    {
+      "fileMatch": [
+        "/**/bundleconfig.json"
+      ],
+      "url": "http://json.schemastore.org/bundleconfig"
+    },
+    {
+      "fileMatch": [
+        "/**/compilerconfig.json"
+      ],
+      "url": "http://json.schemastore.org/compilerconfig"
+    },
+    {
+      "fileMatch": [
+        "/**/commands.json"
+      ],
+      "url": "http://json.schemastore.org/commands"
+    },
+    {
+      "fileMatch": [
+        "/**/chutzpah.json"
+      ],
+      "url": "http://json.schemastore.org/chutzpah"
+    },
+    {
+      "fileMatch": [
+        "/**/coffeelint.json"
+      ],
+      "url": "http://json.schemastore.org/coffeelint"
+    },
+    {
+      "fileMatch": [
+        "/**/composer.json"
+      ],
+      "url": "http://json.schemastore.org/composer"
+    },
+    {
+      "fileMatch": [
+        "/**/component.json"
+      ],
+      "url": "http://json.schemastore.org/component"
+    },
+    {
+      "fileMatch": [
+        "/**/config.json"
+      ],
+      "url": "http://json.schemastore.org/config"
+    },
+    {
+      "fileMatch": [
+        "/**/contribute.json"
+      ],
+      "url": "http://json.schemastore.org/contribute"
+    },
+    {
+      "fileMatch": [
+        "/**/.csscomb.json"
+      ],
+      "url": "http://json.schemastore.org/csscomb"
+    },
+    {
+      "fileMatch": [
+        "/**/.csslintrc"
+      ],
+      "url": "http://json.schemastore.org/csslintrc"
+    },
+    {
+      "fileMatch": [
+        "/**/debugsettings.json"
+      ],
+      "url": "http://json.schemastore.org/launchsettings"
+    },
+    {
+      "fileMatch": [
+        "/**/docfx.json"
+      ],
+      "url": "http://json.schemastore.org/docfx"
+    },
+    {
+      "fileMatch": [
+        "/**/dotnetcli.host.json"
+      ],
+      "url": "http://json.schemastore.org/dotnetcli.host"
+    },
+    {
+      "fileMatch": [
+        "/**/epr-manifest.json"
+      ],
+      "url": "http://json.schemastore.org/epr-manifest"
+    },
+    {
+      "fileMatch": [
+        "/**/.eslintrc"
+      ],
+      "url": "http://json.schemastore.org/eslintrc"
+    },
+    {
+      "fileMatch": [
+        "/**/function.json"
+      ],
+      "url": "http://json.schemastore.org/function"
+    },
+    {
+      "fileMatch": [
+        "/**/geojson.json"
+      ],
+      "url": "http://json.schemastore.org/geojson"
+    },
+    {
+      "fileMatch": [
+        "/**/global.json"
+      ],
+      "url": "http://json.schemastore.org/global"
+    },
+    {
+      "fileMatch": [
+        "/**/haxelib.json"
+      ],
+      "url": "http://json.schemastore.org/haxelib"
+    },
+    {
+      "fileMatch": [
+        "/**/host.json"
+      ],
+      "url": "http://json.schemastore.org/host"
+    },
+    {
+      "fileMatch": [
+        "/**/host-meta.json"
+      ],
+      "url": "http://json.schemastore.org/host-meta"
+    },
+    {
+      "fileMatch": [
+        "/**/.htmlhintrc"
+      ],
+      "url": "http://json.schemastore.org/htmlhint"
+    },
+    {
+      "fileMatch": [
+        "/**/.jsbeautifyrc"
+      ],
+      "url": "http://json.schemastore.org/jsbeautifyrc"
+    },
+    {
+      "fileMatch": [
+        "/**/.jsbeautifyrc-nested"
+      ],
+      "url": "http://json.schemastore.org/jsbeautifyrc-nested"
+    },
+    {
+      "fileMatch": [
+        "/**/.jscsrc"
+      ],
+      "url": "http://json.schemastore.org/jscsrc"
+    },
+    {
+      "fileMatch": [
+        "/**/.jshintrc"
+      ],
+      "url": "http://json.schemastore.org/jshintrc"
+    },
+    {
+      "fileMatch": [
+        "/**/.jsinspectrc"
+      ],
+      "url": "http://json.schemastore.org/jsinspectrc"
+    },
+    {
+      "fileMatch": [
+        "/**/*.jsonld"
+      ],
+      "url": "http://json.schemastore.org/jsonld"
+    },
+    {
+      "fileMatch": [
+        "/**/jsconfig.json"
+      ],
+      "url": "http://json.schemastore.org/jsconfig"
+    },
+    {
+      "fileMatch": [
+        "/**/launchsettings.json"
+      ],
+      "url": "http://json.schemastore.org/launchsettings"
+    },
+    {
+      "fileMatch": [
+        "/**/library.json"
+      ],
+      "url": "http://json.schemastore.org/library"
+    },
+    {
+      "fileMatch": [
+        "/**/mimetypes.json"
+      ],
+      "url": "http://json.schemastore.org/mimetypes"
+    },
+    {
+      "fileMatch": [
+        "/**/.modernizrrc"
+      ],
+      "url": "http://json.schemastore.org/modernizrrc"
+    },
+    {
+      "fileMatch": [
+        "/**/mycode.json"
+      ],
+      "url": "http://json.schemastore.org/mycode"
+    },
+    {
+      "fileMatch": [
+        "/**/nuget-project.json"
+      ],
+      "url": "http://json.schemastore.org/nuget-project"
+    },
+    {
+      "fileMatch": [
+        "/**/openfin.json"
+      ],
+      "url": "http://json.schemastore.org/openfin"
+    },
+    {
+      "fileMatch": [
+        "/**/package.json"
+      ],
+      "url": "http://json.schemastore.org/package"
+    },
+    {
+      "fileMatch": [
+        "/**/package.manifest"
+      ],
+      "url": "http://json.schemastore.org/package.manifest"
+    },
+    {
+      "fileMatch": [
+        "/**/pattern.json"
+      ],
+      "url": "http://json.schemastore.org/pattern"
+    },
+    {
+      "fileMatch": [
+        "/**/prettierrc.json"
+      ],
+      "url": "http://json.schemastore.org/prettierrc"
+    },
+    {
+      "fileMatch": [
+        "/**/project.json"
+      ],
+      "url": "http://json.schemastore.org/project"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-beta3.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-beta3"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-beta4.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-beta4"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-beta5.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-beta5"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-beta6.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-beta6"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-beta8.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-beta8"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-rc1.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-rc1"
+    },
+    {
+      "fileMatch": [
+        "/**/project-1.0.0-rc2.json"
+      ],
+      "url": "http://json.schemastore.org/project-1.0.0-rc2"
+    },
+    {
+      "fileMatch": [
+        "/**/proxies.json"
+      ],
+      "url": "http://json.schemastore.org/proxies"
+    },
+    {
+      "fileMatch": [
+        "/**/*.resjson"
+      ],
+      "url": "http://json.schemastore.org/resjson"
+    },
+    {
+      "fileMatch": [
+        "/**/sarif-1.0.0.json"
+      ],
+      "url": "http://json.schemastore.org/sarif"
+    },
+    {
+      "fileMatch": [
+        "/**/sarif-1.0.0.json"
+      ],
+      "url": "http://json.schemastore.org/sarif-1.0.0.json"
+    },
+    {
+      "fileMatch": [
+        "/**/sarif-1.0.0-beta.5.json"
+      ],
+      "url": "http://json.schemastore.org/sarif-1.0.0-beta.5.json"
+    },
+    {
+      "fileMatch": [
+        "/**/sarif-1.0.0-beta.4.json"
+      ],
+      "url": "http://json.schemastore.org/sarif-1.0.0-beta.4.json"
+    },
+    {
+      "fileMatch": [
+        "/**/settings.job"
+      ],
+      "url": "http://json.schemastore.org/settings.job"
+    },
+    {
+      "fileMatch": [
+        "/**/.stylelintrc"
+      ],
+      "url": "http://json.schemastore.org/stylelintrc"
+    },
+    {
+      "fileMatch": [
+        "/**/template.json"
+      ],
+      "url": "http://json.schemastore.org/template"
+    },
+    {
+      "fileMatch": [
+        "/**/templatsources.json"
+      ],
+      "url": "http://json.schemastore.org/templatesources"
+    },
+    {
+      "fileMatch": [
+        "/**/tsconfig.json"
+      ],
+      "url": "http://json.schemastore.org/tsconfig"
+    },
+    {
+      "fileMatch": [
+        "/**/tsd.json"
+      ],
+      "url": "http://json.schemastore.org/tsd"
+    },
+    {
+      "fileMatch": [
+        "/**/tsdrc.json"
+      ],
+      "url": "http://json.schemastore.org/tsdrc"
+    },
+    {
+      "fileMatch": [
+        "/**/tslint.json"
+      ],
+      "url": "http://json.schemastore.org/tslint"
+    },
+    {
+      "fileMatch": [
+        "/**/typings.json"
+      ],
+      "url": "http://json.schemastore.org/typings"
+    },
+    {
+      "fileMatch": [
+        "/**/typingsrc.json"
+      ],
+      "url": "http://json.schemastore.org/typingsrc"
+    },
+    {
+      "fileMatch": [
+        "/**/vega.json"
+      ],
+      "url": "http://json.schemastore.org/vega"
+    },
+    {
+      "fileMatch": [
+        "/**/vega-lite.json"
+      ],
+      "url": "http://json.schemastore.org/vega-lite"
+    },
+    {
+      "fileMatch": [
+        "/**/version.json"
+      ],
+      "url": "https://raw.githubusercontent.com/AArnott/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json"
+    },
+    {
+      "fileMatch": [
+        "/**/webjobs-list.json"
+      ],
+      "url": "http://json.schemastore.org/webjobs-list"
+    },
+    {
+      "fileMatch": [
+        "/**/webjobpublishsettings.json"
+      ],
+      "url": "http://json.schemastore.org/webjob-publish-settings"
+    },
+    {
+      "fileMatch": [
+        "/**/vs-2017.3.host.json"
+      ],
+      "url": "http://json.schemastore.org/vs-2017.3.host"
+    },
+    {
+      "fileMatch": [
+        "/**/xunit.runner.json"
+      ],
+      "url": "http://json.schemastore.org/xunit.runner.schema"
+    }
+  ],
+  "local-history.treeLocation": "localHistory",
+  "logViewer.logLevel": "debug",
+  "logViewer.showStatusBarItemOnChange": true,
+  "logViewer.watch": [],
+  "logViewer.windows.allowBackslashAsPathSeparator": false,
+  "markdown.trace": "verbose",
+  "markdownlint.config": {
+    "$schema": "./schema/markdownlint-config-schema.json",
+    "blanks-around-fences": {
+      "list_items": true
+    },
+    "blanks-around-headings": {
+      "lines_above": 2,
+      "lines_below": 1
+    },
+    "blanks-around-lists": true,
+    "code-block-style": {
+      "style": "fenced"
+    },
+    "code-fence-style": {
+      "style": "backtick"
+    },
+    "commands-show-output": true,
+    "fenced-code-language": true,
+    "first-heading-h1": false,
+    "first-line-heading": {
+      "front_matter_title": "^\\s*title\\s*[:=]",
+      "level": 1
+    },
+    "header-start-left": true,
+    "header-style": {
+      "style": "atx"
+    },
+    "heading-increment": true,
+    "hr-style": {
+      "style": "---"
+    },
+    "line-length": {
+      "code_block_line_length": 120,
+      "code_blocks": true,
+      "heading_line_length": 80,
+      "headings": true,
+      "line_length": 120,
+      "strict": false,
+      "tables": true
+    },
+    "list-indent": true,
+    "list-marker-space": {
+      "ol_multi": 1,
+      "ol_single": 1,
+      "ul_multi": 1,
+      "ul_single": 1
+    },
+    "no-alt-text": true,
+    "no-bare-urls": true,
+    "no-blanks-blockquote": true,
+    "no-duplicate-heading": {
+      "allow_different_nesting": true,
+      "siblings_only": false
+    },
+    "no-emphasis-as-heading": {
+      "punctuation": ".,;:!?。，；：！？"
+    },
+    "no-empty-links": true,
+    "no-hard-tabs": {
+      "code_blocks": true
+    },
+    "no-inline-html": false,
+    "no-missing-space-atx": true,
+    "no-missing-space-closed-atx": false,
+    "no-multiple-blanks": {
+      "maximum": 2
+    },
+    "no-multiple-space-atx": true,
+    "no-multiple-space-blockquote": true,
+    "no-multiple-space-closed-atx": false,
+    "no-reversed-links": true,
+    "no-space-in-code": true,
+    "no-space-in-emphasis": true,
+    "no-space-in-links": true,
+    "no-trailing-punctuation": {
+      "punctuation": ".,;:!?。，；：！？"
+    },
+    "no-trailing-spaces": {
+      "br_spaces": 2,
+      "list_item_empty_lines": false,
+      "strict": true
+    },
+    "ol-prefix": {
+      "style": "one_or_ordered"
+    },
+    "proper-names": {
+      "code_blocks": false,
+      "names": []
+    },
+    "single-title": true,
+    "single-trailing-newline": true,
+    "ul-indent": {
+      "indent": 2,
+      "start_indented": false
+    },
+    "ul-start-left": false,
+    "ul-style": {
+      "style": "dash"
+    }
+  },
+  "markdownlint.customRulesAlwaysAllow": [],
+  "markdownlint.run": "onType",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "npm.enableRunFromFolder": true,
+  "npm.enableScriptExplorer": true,
+  "npm.useRootDirectory": true,
+  "npmSmartImporter.provideImportSuggestionsOnSelection": true,
+  "path-intellisense.showHiddenFiles": true,
+  "projectManager.any.baseFolders": [
+    "/Users/kilian/dev"
+  ],
+  "projectManager.git.baseFolders": [
+    "/Users/kilian/dev"
+  ],
+  "projectManager.groupList": true,
+  "projectManager.vscode.baseFolders": [
+    "/Users/kilian/Library/Application Support/Code - Insiders/User"
+  ],
+  "projectTemplates.placeholderRegExp": "##{(\\w+)?}",
+  "projectTemplates.placeholders": {},
+  "remote.SSH.configFile": "C:\\Users\\Kilian\\.ssh\\config",
+  "remote.SSH.defaultExtensions": [
+    "eg2.vscode-npm-script"
+  ],
+  "remote.SSH.lockfilesInTmp": true,
+  "remote.SSH.logLevel": "trace",
+  "remote.SSH.path": "D:\\Program Files\\Git\\usr\\bin\\ssh.exe",
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": true,
+  "remote.downloadExtensionsLocally": true,
+  "remote.restoreForwardedPorts": true,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.wrappingColumn": 80,
+  "scm.alwaysShowActions": true,
+  "search.collapseResults": "auto",
+  "search.globalFindClipboard": true,
+  "search.maintainFileSearchCache": true,
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "search.smartCase": true,
+  "search.useGlobalIgnoreFiles": true,
+  "shellcheck.customArgs": [],
+  "shellcheck.disableVersionCheck": true,
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.useWorkspaceRootAsCwd": true,
+  "sortJSON.contextMenu": {
+    "sortJSON": true,
+    "sortJSONAlphaNum": false,
+    "sortJSONAlphaNumReverse": false,
+    "sortJSONKeyLength": true,
+    "sortJSONKeyLengthReverse": false,
+    "sortJSONReverse": false,
+    "sortJSONType": false,
+    "sortJSONTypeReverse": false,
+    "sortJSONValues": false,
+    "sortJSONValuesReverse": false
+  },
+  "standard.autoFixOnSave": true,
+  "standard.enable": true,
+  "standard.run": "onType",
+  "standard.usePackageJson": true,
+  "standard.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "subtleBrackets.style": {
+    "global": {
+      "borderColor": "#fac863",
+      "borderWidth": "2px"
+    }
+  },
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "a310057cc99f41209dce250cf8c40a39",
+  "taskExplorer.debug": true,
+  "taskExplorer.enableAnsiconForAnt": false,
+  "taskExplorer.enableAnt": false,
+  "taskExplorer.enableAppPublisher": false,
+  "taskExplorer.enableBatch": false,
+  "taskExplorer.enableGradle": false,
+  "taskExplorer.enableGulp": false,
+  "taskExplorer.enableMake": false,
+  "taskExplorer.enableNsis": false,
+  "taskExplorer.enablePerl": false,
+  "taskExplorer.enablePowershell": false,
+  "taskExplorer.enablePython": false,
+  "taskExplorer.enableRuby": false,
+  "taskExplorer.enableSideBar": true,
+  "taskExplorer.enableTsc": false,
+  "taskExplorer.exclude": [
+    "**/node_modules/**",
+    "**/.vscode-test/**",
+    "**/bin/**",
+    "**/build/**",
+    "**/CompiledOutput/**",
+    "**/dist/**",
+    "**/doc/**",
+    "**/ext/**",
+    "**/out/**",
+    "**/output/**",
+    "**/packages/**",
+    "**/release/**",
+    "**/releases/**",
+    "**/samples/**",
+    "**/sdks/**",
+    "**/static/**",
+    "**/target/**",
+    "**/test/**",
+    "**/third_party/**",
+    "**/vendor/**"
+  ],
+  "taskExplorer.groupDashed": true,
+  "terminal.external.osxExec": "iterm",
+  "terminal.external.windowsExec": "D:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.experimentalRefreshOnResume": true,
+  "terminal.integrated.experimentalUseTitleEvent": true,
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.minimumContrastRatio": 7,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+  "terminalCapture.useClipboard": false,
+  "titlebarLess.showTrafficLights": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "tsimporter.emitSemicolon": false,
+  "tsimporter.noStatusBar": true,
+  "tsimporter.spaceBetweenBraces": false,
+  "turboConsoleLog.logMessagePrefix": ">>",
+  "turboConsoleLog.quote": "'",
+  "typescript.format.enable": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "typescript.format.semicolons": "remove",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.locale": "en",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.validate.enable": false,
+  "versionlens.showDependencyStatusesAtStartup": true,
+  "versionlens.showTaggedVersionsAtStartup": true,
+  "vsicons.projectDetection.autoReload": true,
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "websearch.ac_engine": "Google",
+  "websearch.default_engine": "Google",
+  "window.autoDetectHighContrast": false,
+  "window.clickThroughInactive": false,
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "compact",
+  "window.nativeTabs": true,
+  "window.openFilesInNewWindow": "off",
+  "window.openFoldersInNewWindow": "on",
+  "window.title": "${dirty} ${rootName}${separator}${activeEditorShort}",
+  "window.titleSeparator": " >> ",
+  "window.zoomLevel": 0,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#4488ff55",
     "window.activeBorder": "#5fb3b3",
     "window.inactiveBorder": "#1b2b34"
-  }
+  },
+  "workbench.colorTheme": "Syntax Material Dark Level 1 (beta)",
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.list.keyboardNavigation": "filter",
+  "workbench.settings.openDefaultKeybindings": true,
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 24,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "typescript": "ts-node -r tsconfig-paths/register --files --project tsconfig.json $dir$fileNameWithoutExt",
+  },
+  "code-runner.showExecutionMessage": true,
+  "editor.acceptSuggestionOnCommitCharacter": false
 }

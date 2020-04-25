@@ -9,6 +9,7 @@ import inquirer from 'inquirer'
 import chalk from 'chalk'
 
 // just the selection prompt
+console.log(process.env)
 if (!process.env.DEBUG) {
   inquirer.prompt([{
     type: 'list',
