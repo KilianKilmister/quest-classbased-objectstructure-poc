@@ -7,6 +7,7 @@
     "url": "https://github.com/github-username/quest-classbased-objstructure-poc/issues"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "inquirer": "^7.1.0"
   },
   "description": "small PoC creating the entire object-structure using ES6 classes and mapping parent-child relation with a costumised instace of the NodeJS path-module to create IPv6-like addresses and scopes.",
@@ -27,7 +28,7 @@
     "url": "https://github.com/kiliankilmister/quest-classbased-objstructure-poc.git"
   },
   "scripts": {
-    "run": "quest-runexample"
+    "run": "/usr/bin/env node \"/Users/kilian/dev/Quest/classbased-objectstructure-poc/bin/ex.js\""
   },
   "type": "module",
   "version": "1.0.6"

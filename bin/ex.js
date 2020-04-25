@@ -1,58 +1,64 @@
 #!/usr/bin/env node
-import * as src from '../lib/main.js'
+
+import * as Quest from '../lib/main.js'
 // node internals
 import * as util from 'util'
 import { performance } from 'perf_hooks'
 // inquirer provides the CLI UI
 import inquirer from 'inquirer'
+import chalk from 'chalk'
 
 // just the selection prompt
-inquirer.prompt([{
-  type: 'list',
-  name: 'script',
-  message: 'choose which script to run',
-  choices: ['unstructured', 'structured']
-}]).then(answer => {
-  answer.script === 'structured' ? structured() : unstructured()
-})
-
+if (!process.env.DEBUG) {
+  inquirer.prompt([{
+    type: 'list',
+    name: 'script',
+    message: 'choose which script to run',
+    choices: ['unstructured', 'structured']
+  }]).then(answer => {
+    answer.script === 'structured' ? structured() : unstructured()
+  })
+} else unstructured()
 /**
  * simple structured generation of a bare bone objectStructure
  */
 function structured () {
   const T0 = performance.now()
-  const realm = new src.Realm()
+  const realm = new Quest.model.Realm()
 
-  const world = new src.World(realm)
-
-  // area
-  const areaA = new src.Area(world)
-
-  const roomA = new src.Room(areaA)
-  const objectA1 = new src.GameObject(roomA, { hidden: false })
-  const objectA2 = new src.GameObject(roomA, { hidden: false })
-
-  const roomB = new src.Room(areaA)
-  const objectB1 = new src.GameObject(roomB, { hidden: false })
-  const objectB2 = new src.GameObject(roomB, { hidden: false })
+  const world = new Quest.model.World(realm)
 
   // area
-  const areaX = new src.Area(world)
+  const areaA = new Quest.model.Area(world)
 
-  const roomX = new src.Room(areaX)
-  const objectX1 = new src.GameObject(roomX, { hidden: false })
-  const objectX2 = new src.GameObject(roomX, { hidden: false })
+  const roomA = new Quest.model.Room(areaA)
+  const objectA1 = new Quest.model.GameObject(roomA, { hidden: false })
+  const objectA2 = new Quest.model.GameObject(roomA, { hidden: false })
 
-  const roomY = new src.Room(areaX)
-  const objectY1 = new src.GameObject(roomY, { hidden: false })
-  const objectY2 = new src.GameObject(roomY, { hidden: false })
+  const roomB = new Quest.model.Room(areaA)
+  const objectB1 = new Quest.model.GameObject(roomB, { hidden: false })
+  const objectB2 = new Quest.model.GameObject(roomB, { hidden: false })
+
+  // area
+  const areaX = new Quest.model.Area(world)
+
+  const roomX = new Quest.model.Room(areaX)
+  const objectX1 = new Quest.model.GameObject(roomX, { hidden: false })
+  const objectX2 = new Quest.model.GameObject(roomX, { hidden: false })
+
+  const roomY = new Quest.model.Room(areaX)
+  const objectY1 = new Quest.model.GameObject(roomY, { hidden: false })
+  const objectY2 = new Quest.model.GameObject(roomY, { hidden: false })
 
   // result logging
   console.log('-------- result ---------')
-  console.log(util.inspect(src.GLOBAL_ROOT.children, false, 0, true))
-  console.log('A grand total of ' + Object.keys(src.GLOBAL_ROOT.children).length + ' objects in ' + Math.round(performance.now() - T0) + 'ms.')
+  // pick random object
+  const randObj = getRandomElement(global.GLOBAL_ROOT.children)
+  console.log(chalk.cyan('test address getter:'))
+  console.log('Object: ' + randObj.plain)
+  console.log('Address: ' + randObj.address)
+  console.log('A grand total of ' + Object.keys(global.GLOBAL_ROOT.children).length + ' objects in ' + Math.round(performance.now() - T0) + 'ms.')
 }
-
 /**
  * more advanced objectStructure generator
  */
@@ -86,17 +92,23 @@ async function unstructured () {
   }
 
   // generators
-  await generate(src.Realm, 2, 10, null)
-  await generate(src.World, 2, 20, 'realm')
-  await generate(src.Area, 10, 40, 'world')
-  await generate(src.Room, 10, 100, 'area')
-  await generate(src.GameObject, 100, 1000, 'room')
-  await generate(src.GameObject, 50, 500, 'gameObject')
+  await generate(Quest.model.Realm, 2, 10, null)
+  await generate(Quest.model.World, 5, 20, 'realm')
+  await generate(Quest.model.Area, 10, 40, 'world')
+  await generate(Quest.model.Room, 10, 100, 'area')
+  await generate(Quest.model.GameObject, 100, 1000, 'room')
+  await generate(Quest.model.GameObject, 50, 500, 'gameObject')
+  const all = Object.assign([], index.area, index.gameObject, index.realm, index.room, index.world)
 
   // Log when donw
   console.log('-------- result ---------')
-  console.log(util.inspect(src.GLOBAL_ROOT.children, false, null, true))
-  return index.report()
+  console.log(util.inspect(global.GLOBAL_ROOT.children, false, 0, true))
+  ;['a', 'b', 'c', 'd'].forEach(element => {
+    element = getRandomElement(all)
+    console.log(element.plain + ' -> ' + Quest.getGlobalAddress)
+  })
+  index.report()
+  console.log(util.inspect(global.GLOBAL_ROOT.children, false, 0, true))
 
   // helper
   async function generate (ObjectClass, min, max, _parent) {
@@ -105,23 +117,23 @@ async function unstructured () {
 
     // generator
     do {
-      const parent = getRandomParent()
+      const parent = getRandomElement(index[_parent])
       const obj = new ObjectClass(parent)
       index[obj.plain].push(obj)
       i++
     }
     while (i < limit)
-
-    // helpers
-    function random (_min, _max) {
-      return _min + Math.random() * (_max - _min)
-    }
-    function getRandomParent () {
-      const choices = {
-        ...index[_parent]
-      }
-      const rand = random(0, choices.lenght || 0)
-      return choices[Math.floor(rand)]
-    }
   }
+}
+
+// helpers
+function getRandomElement (choices) {
+  if (!choices) return
+  const rand = random(0, choices.length || 0)
+  const x = Math.floor(rand)
+  const y = choices[x]
+  return y
+}
+function random (_min, _max) {
+  return _min + Math.random() * (_max - _min)
 }

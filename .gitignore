@@ -2,18 +2,8 @@
 node_modules
 temp{!late}*
 .temp*
+.history
 # if you're wondering: this is a hidden config file on macOS
 .DS_Store
 
 tmp.*
-*.xml
-*.aslx
-*.yml
-*.rb
-*.txt
-*.zip
-game-x*/
-libx/
-page-x*.html
-images/Joseph Banks.svg
-misc/
