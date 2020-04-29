@@ -59,7 +59,6 @@ function structured () {
     if (err) throw err
     console.log('done')
   })
-  console.log(Quest.indexNew({}))
 }
 
 /**
