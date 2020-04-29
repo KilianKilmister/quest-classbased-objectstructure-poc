@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: lib/controller/uuidModule.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,59 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: lib/controller/uuidModule.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * module for assigning UUIDs
+ * @module UUID-Module
+ */
 
+/**
+ * @const {Object} the universal UUID-index
+ * *should probably be integrated into ROOT object*
+ */
+export const UIDDictionary = {}
 
-    <h3> </h3>
+/**
+ * uuid generator and indexer
+ * @param {Object} self
+ * @returns {Object} self
+ */
+export function indexNew (self) {
+  let uuid
+  do {
+    var S4 = function () {
+      return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
+    }
+    uuid = S4() + S4() + '-' + S4() + '-' + S4()
+  }
+  while (UIDDictionary[uuid])
+  if (self.isGlobalRoot) {
+    uuid = 'ROOT'
+  }
+  UIDDictionary[uuid] = self
+  self.uuid = uuid
+  return self
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+/**
+ * scope an object by it's UUID
+ * @param {string} uuid
+ * @returns {Object} target object
+ */
+export function getObjectFromUID (uuid) {
+  return UIDDictionary[uuid]
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
