@@ -121,10 +121,10 @@ async function unstructured () {
 
   /**
    * helper
-   * @param {*} ObjectClass
-   * @param {*} min
-   * @param {*} max
-   * @param {*} _parent
+   * @param {Class} ObjectClass
+   * @param {number} min
+   * @param {number} max
+   * @param {string} _parent
    */
   async function generate (ObjectClass, min, max, _parent) {
     const limit = random(min, max)
@@ -143,7 +143,7 @@ async function unstructured () {
 
 /**
  * helper
- * @param {*} choices
+ * @param {Array} choices
  * @returns random element from input array
  */
 function getRandomElement (choices) {
@@ -156,8 +156,8 @@ function getRandomElement (choices) {
 
 /**
  * helper
- * @param {*} _min
- * @param {*} _max
+ * @param {number} _min
+ * @param {number} _max
  * @returns random number between min and max
  */
 function random (_min, _max) {
@@ -168,8 +168,8 @@ let childNodes = 0
 let cache = 0
 /**
  * helper to condense the JSON.stringify for writing to file
- * @param {*} key
- * @param {*} value
+ * @param {string} key
+ * @param {any} value
  */
 function jsonReplacer (key, value) {
   if (key === 'parent') return undefined

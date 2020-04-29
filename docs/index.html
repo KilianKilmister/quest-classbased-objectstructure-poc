@@ -42,6 +42,217 @@
 
 
 
+    <section>
+        <article><h1>Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance</h1>
+<h2>Main Features</h2>
+<ol>
+<li><a href="#es6-class-based-inheritance">ES6-Class based Inheritance</a></li>
+<li><a href="#two-basic-scripts-showcasing-the-poc">Two Basic Scripts Showcasing the PoC</a></li>
+<li><a href="#High-Degree-of-Isolation-on-every-Object-helping-against-unpredictable-Code-Execution">High Degree of Isolation on every Object making <code>Code</code>-Execution Predictable</a></li>
+<li><a href="#use-of-javascript-native-proxys-implemented-deep-in-the-core-code">Use of JavaScript-native <code>Proxys</code> Implemented deep in the Core <code>Code</code></a></li>
+<li><a href="#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games">Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games</a></li>
+<li><a href="#fully-functional-address-module-able-to-resolve-both-absolute-and-relative-addresses">Fully Functional Address-Module able to Resolve both Absolute and Relative Addresses</a></li>
+<li><a href="#simple-uuid-creation-module-and-global-index">Simple UUID-Creation-Module and Global Index</a></li>
+<li><a href="#basic-caching-of-child-objects-allowing-fast-retrieval-of-children">Basic Caching of Child-Objects allowing Fast Retrieval of Children</a></li>
+</ol>
+<h2>ES6-Class based Inheritance</h2>
+<p>A strict inheritance model to optimise runtime-execution and makes the program act
+more predictable. Currently it consists of two branches inheriting from a single
+Node. They are currently mostly representational but can easily be expanded
+upon.<br>
+The two branches are: (names are subject to change)</p>
+<h3>World-Objects</h3>
+<p>Forming the Super-Structure of the world and grouping programmatic environments.</p>
+<h3>Game-Objects</h3>
+<p>Forming the manipulatable world</p>
+<h2>Two Basic Scripts Showcasing the PoC</h2>
+<p>They can be used by running <code>bin/ex.js</code> and selecting the respective options when
+prompted.</p>
+<h3>Unstructured</h3>
+<p>Soft benchmarking creating up to 20'000 objects representing a massive
+world. Number of objects is dictated by random number generation within an
+easily adjustable min-max. Depending on available resources i'm able to
+generate a world populated with 20k objects in between 0.5 and 2 seconds.
+both acceptable for production and 20k is massive and could easily be
+generated as needed or at first time setup.</p>
+<h3>Structured</h3>
+<p>Simple showcase of the <code>addNewChild()</code>-method present on (as-of-now) every
+object. Generates 32 objects in a few milliseconds</p>
+<p>Both Tasks write the resulting Root-Object to a <code>JSON</code> file (heavily shortened to
+a depth of about 5).<br>
+The API is (albeit messy) fully exposed and ready to be experimented upon. This
+PoC is also available as an NPM package that can can be downloaded and used as
+a dependency.</p>
+<pre class="prettyprint source lang-sh"><code>npm install @slick_kilmister/quest-classbased-objstructure-poc
+</code></pre>
+<h2>High Degree of Isolation on every Object helping against unpredictable Code-Execution</h2>
+<p>High degrees of isolation were a design focus. Objects know only basic
+properties of the world around them. Every property escaping the objects scope
+is handled by a super or the <code>proxy</code>. This naturally cuts down on glitches and
+while source <code>code</code> gets more complex, it makes scripting simpler.</p>
+<ul>
+<li>eg. no complex scoping is necessary as objects visible from a game-logic
+standpoint (and only those) are also programmatically visible by default.</li>
+<li>this can be easily fine-tuned by selectively exposing/hiding objects from the
+local scope.</li>
+</ul>
+<h2>Use of JavaScript-native Proxys Implemented deep in the Core Code</h2>
+<p>The base-object-<code>constructor</code> (and thus everything that inherits from it)
+returns a <code>Proxy</code> with a specialized handler object enveloping it.
+The <code>Proxy</code> serves three main purposes:</p>
+<ol>
+<li>The <code>Proxy</code> enables permission checking and pre/post-processing of data before it reaches
+the target object.</li>
+<li>It can store information at an easy-to-access place while still isolating the
+actual object from it. eg. it can store the absolute address of an Object
+while still keeping it out of reach of the object itself and of those who can
+read the object.</li>
+<li>Being Native-<code>Code</code>, they are incredibly efficient and with some simple
+<code>boolean</code>-pre-triggers they cause close to zero additional processing time and
+(when correctly configured) are basically impossible to circumvent.<br>
+Case-and-Point: ALL objects in the example scripts are wrapped by a
+<code>proxy</code>.
+And the design of the logging-to-console has more effect on execution speed than all
+the <code>proxies</code> combined.</li>
+</ol>
+<p>They are making source <code>code</code> less intuitive, tho. but i think they are well worth
+it.</p>
+<h2>Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games</h2>
+<p>Using proper <code>prototype</code> inheritance entire sections can be generated and
+discarded on the fly with few lines of <code>code</code>, making scripting much easier and
+runtime smoother.</p>
+<h2>Fully Functional Address Module able to Resolve both Absolute and Relative Addresses</h2>
+<p>this PoC comes with a fully functional Address-module based on the NodeJS
+<code>path</code>-module. It currently features construction of the Absolute Address of an
+Object and resolving of relative addresses by only giving it start- and
+target-Object.<br>
+It is designed after IPv6, every parent acting as a DNS for its direct children.
+Each parent assigns a in-scope-unique HEX-based ID to each of it's children at their
+creation (or relocation). These are then joined by a <code>:</code> giving an easy to read
+and use address. eg: <code>:0:4:1:2:50</code> (leading <code>:</code> indicates the absolute root)
+Relative addresses are prefixed with a letter representing the scope of the last
+common ancestor. eg: <code>A:1:207</code> (the <code>capital A</code> indicating that both objects are
+within the same area) this adds a layer of isolation as a local control-node
+(like a room or container) does not need access or knowledge of its own
+position to guide scoping within itself.<br>
+Addresses can be accessed by the <code>.address</code>-getter/trap or
+the <code>.getRelativeAddress(target)</code>-method</p>
+<h3>Examples Pulled from the Showcase-Script</h3>
+<table>
+<thead>
+<tr>
+<th>represented by</th>
+<th style="text-align:right">ROOT</th>
+<th style="text-align:right">Realm</th>
+<th style="text-align:right">World</th>
+<th style="text-align:right">Area</th>
+<th style="text-align:right">room</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leading-</td>
+<td style="text-align:right"><code>:</code></td>
+<td style="text-align:right"><code>R</code></td>
+<td style="text-align:right"><code>W</code></td>
+<td style="text-align:right"><code>A</code></td>
+<td style="text-align:right"><code>r</code></td>
+</tr>
+<tr>
+<td>-----x------</td>
+<td style="text-align:right">-------x-------</td>
+<td style="text-align:right">-------x--------</td>
+<td style="text-align:right">-------x-------</td>
+<td style="text-align:right">-------x------</td>
+<td style="text-align:right">-------x------</td>
+</tr>
+<tr>
+<td>from</td>
+<td style="text-align:right"><code>:0:2:3:3:a8</code></td>
+<td style="text-align:right"><code>:0:2:2:1:22c</code></td>
+<td style="text-align:right"><code>:0:2:2:2:32e</code></td>
+<td style="text-align:right"><code>:0:2:2:4:52</code></td>
+<td style="text-align:right"><code>:0:2:7:1:1d0</code></td>
+</tr>
+<tr>
+<td>to</td>
+<td style="text-align:right"><code>:0:2:7:2:198</code></td>
+<td style="text-align:right"><code>:0:2:3:3:16e:0</code></td>
+<td style="text-align:right"><code>:0:2:2:4:1ff</code></td>
+<td style="text-align:right"><code>:0:2:9:1:362</code></td>
+<td style="text-align:right"><code>:0:2:a:2:335</code></td>
+</tr>
+<tr>
+<td>relative</td>
+<td style="text-align:right"><code>W:7:2:198</code></td>
+<td style="text-align:right"><code>W:3:3:16e:0</code></td>
+<td style="text-align:right"><code>A:4:1ff</code></td>
+<td style="text-align:right"><code>W:9:1:362</code></td>
+<td style="text-align:right"><code>W:a:2:335</code></td>
+</tr>
+<tr>
+<td>-----x------</td>
+<td style="text-align:right">-------x-------</td>
+<td style="text-align:right">-------x--------</td>
+<td style="text-align:right">-------x------</td>
+<td style="text-align:right">-------x------</td>
+<td style="text-align:right">-------x------</td>
+</tr>
+<tr>
+<td>from</td>
+<td style="text-align:right"><code>:0:2:2:1:372</code></td>
+<td style="text-align:right"><code>:0:2:2:4:24c</code></td>
+<td style="text-align:right"><code>:0:2:2:4:2c4</code></td>
+<td style="text-align:right"><code>:0:2:2:3:114</code></td>
+<td style="text-align:right"><code>:0:2:2:3:1bb</code></td>
+</tr>
+<tr>
+<td>to</td>
+<td style="text-align:right"><code>:0:2:8:2:2a2</code></td>
+<td style="text-align:right"><code>:0:2:9:2:341</code></td>
+<td style="text-align:right"><code>:0:2:8:2:9f</code></td>
+<td style="text-align:right"><code>:0:2:a:1:36f</code></td>
+<td style="text-align:right"><code>:0:2:8:2:fb</code></td>
+</tr>
+<tr>
+<td>relative</td>
+<td style="text-align:right"><code>W:8:2:2a2</code></td>
+<td style="text-align:right"><code>W:9:2:341</code></td>
+<td style="text-align:right"><code>W:8:2:9f</code></td>
+<td style="text-align:right"><code>W:a:1:36f</code></td>
+<td style="text-align:right"><code>W:8:2:fb</code></td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: smaller subdivisions currently all are lead by <code>lower-case c</code> for container</p>
+<h2>Simple UUID-Creation-Module and Global Index</h2>
+<p>Every object is assigned a unique UUID at creation and is indexed with it.
+contrary to the ID used in the Address-module, the object keeps this one
+regardless of location and the UUID won't be given free at object destruction.
+This is a simple way to guarantee persistance of object-connections. eg: lock
+and key relation.<br>
+The UUID-Creator is simple and can be tweaked if necessary. Currently it
+guarantees uniqueness and generates a HEX-base ID of <code>8+4+4</code>-digits.
+eg: <code>4e71fff5-1757-1dc0</code></p>
+<h2>Basic Caching of Child-Objects allowing Fast Retrieval of Children</h2>
+<p>The ChildCache-Object allows for some basic caching. It's based on an
+independent class outside the inheritance tree as a refracturing measure.
+It works as a mixin of sort and is created when first needed. So objects without
+any children don't try to start caching<br>
+It's not really supposed to be directly accessed but works as an extension of
+the base-class. Its methods being mainly used by the parent object. and serving
+as a Node to quickly easily connect (grand-)children to their respective
+container.<br>
+It currently features some ultra basic caching working as a data-base for the
+getters of the main Object. The caching is bare-bones and needs optimization,
+but as-is it could already serve specific data to their matching getters.<br>
+It could keep the matching data ready to serve for various containers of an
+object. eg: a table with a hidden compartment (separating on-top, and
+compartment) or an (N-)PC inventory (separating held-, worn-, stored- etc. items).<br>
+This makes it easy for programmatic-logic to follow game-logic as it could
+easily handle visibility, accessability or unlock-requirements within the parent object directly.</p></article>
+    </section>
+
 
 
 
@@ -56,7 +267,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Wed Apr 29 2020 03:56:50 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Wed Apr 29 2020 11:39:44 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
