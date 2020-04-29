@@ -8,11 +8,8 @@
       "node_modules"
     ],
     "include": [
-      "lib/",
-      "bin/"
-    ],
-    "includePattern": "(lib|bin|src|)/.+\\.js(doc|x)?$",
-    "excludePattern": "(^|\\/|\\\\|\\.)_"
+      "./"
+    ]
   },
   "sourceType": "module",
   "tags": {
