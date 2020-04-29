@@ -1,4 +1,4 @@
-# Proof of Concept for Rebasing the Core Object Structure on `Prototype` Inheritance
+# Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
 
 ## Main Features
@@ -76,7 +76,7 @@ npm install @slick_kilmister/quest-classbased-objstructure-poc
 ```
 
 
-## High Degree of Isolation on every Object making `Code`-Execution act Predictable
+## High Degree of Isolation on every Object making Code-Execution act Predictable
 
 High degrees of isolation were a design focus. Objects know only basic
 properties of the world around them. Every property escaping the objects scope
@@ -89,7 +89,7 @@ while source `code` gets more complex, it makes scripting simpler.
   local scope.
 
 
-## Use of **JavaScript**-native `Proxys` Implemented deep in the Core `Code`
+## Use of **JavaScript**-native Proxys Implemented deep in the Core `Code`
 
 The base-object-`constructor` (and thus everything that inherits from it)
 returns a `Proxy` with a specialized handler object enveloping it.
@@ -152,6 +152,7 @@ the `.getRelativeAddress(target)`-method
 | **from**       | `:0:2:2:1:372`  |  `:0:2:2:4:24c`  | `:0:2:2:4:2c4`  | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
 | **to**         | `:0:2:8:2:2a2`  |  `:0:2:9:2:341`  |  `:0:2:8:2:9f`  | `:0:2:a:1:36f` | `:0:2:8:2:fb`  |
 | **relative**   |   `W:8:2:2a2`   |   `W:9:2:341`    |   `W:8:2:9f`    |  `W:a:1:36f`   |   `W:8:2:fb`   |
+
 NOTE: *smaller subdivisions currently all are lead by `lower-case c` for container*
 
 
