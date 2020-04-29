@@ -1,9 +1,11 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
-| **Links**                                                   |                          |
-|-------------------------------------------------------------|--------------------------|
-| [Link toGitHub-Repo][repo]<br>[Link to GitHub-Pages][pages] | [![standard]][standardl] |
+| [Link to QuestJS-Repo][Quest]                                                        |                          |
+|--------------------------------------------------------------------------------------|--------------------------|
+| [Link to GitHub-Repo][repo]<br>[Link to jsDocs][pages]<br>[Link to NPM-Package][NPM] | [![standard]][standardl] |
 
+[Quest]:<https://github.com/ThePix/QuestJS>
+[NPM]:<https://www.npmjs.com/package/@slick_kilmister/quest-classbased-objstructure-poc>
 [standard]:<https://cdn.rawgit.com/standard/standard/master/badge.svg>
 [standardl]:<https://github.com/standard/standard>
 [pages]:<https://kiliankilmister.github.io/quest-classbased-objectstructure-poc/>
