@@ -14,7 +14,8 @@
   "devDependencies": {
     "jsdoc": "^3.6.4",
     "standard": "^14.3.3",
-    "typedoc": "^0.17.6"
+    "typedoc": "^0.17.6",
+    "typescript": "^3.8.3"
   },
   "homepage": "https://github.com/kiliankilmister/quest-classbased-objstructure-poc#readme",
   "keywords": [
