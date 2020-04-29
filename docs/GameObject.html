@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: UUID-Module</title>
+    <title>JSDoc: Class: GameObject</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: UUID-Module</h1>
+    <h1 class="page-title">Class: GameObject</h1>
 
     
 
@@ -28,8 +28,12 @@
 
 <header>
     
+        <h2><span class="attribs"><span class="type-signature"></span></span>GameObject<span class="signature">(options)</span><span class="type-signature"></span></h2>
         
-            
+            <div class="class-description"><p>Bare Bones, was not the focus of this PoC
+the base object for anything that needs to be actively manipulated
+in contrast to WorldObjects, these actively expose and share data about
+themselves within their division</p></div>
         
     
 </header>
@@ -38,127 +42,79 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>module for assigning UUIDs</p></div>
-        
 
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
+    
+    <h2>Constructor</h2>
     
 
     
-
+    <h4 class="name" id="GameObject"><span class="type-signature"></span>new GameObject<span class="signature">(options)</span><span class="type-signature"></span></h4>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_uuidModule.js.html">lib/controller/uuidModule.js</a>, <a href="lib_controller_uuidModule.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="~the"><span class="type-signature">(inner, constant) </span>the<span class="type-signature"> :Object</span></h4>
-
 
 
 
 <div class="description">
-    <p>universal UUID-index
-<em>should probably be integrated into ROOT object</em></p>
+    <p>Creates an instance of GameObject.</p>
 </div>
 
 
 
-    <h5>Type:</h5>
-    <ul>
-        <li>
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
             
-<span class="param-type">Object</span>
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
 
 
-        </li>
-    </ul>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
 
 
 
@@ -193,7 +149,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_uuidModule.js.html">lib/controller/uuidModule.js</a>, <a href="lib_controller_uuidModule.js.html#line6">line 6</a>
+        <a href="lib_model_baseClasses_gameObjectClasses.js.html">lib/model/baseClasses/gameObjectClasses.js</a>, <a href="lib_model_baseClasses_gameObjectClasses.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -209,7 +165,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
         
+
+
+    <ul>
+        <li><a href="BaseObject.html">BaseObject</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -221,7 +216,7 @@
     
 
     
-    <h4 class="name" id=".getObjectFromUID"><span class="type-signature">(static) </span>getObjectFromUID<span class="signature">(uuid)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="addNewChild"><span class="type-signature"></span>addNewChild<span class="signature">(&hellip;children)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
 
     
@@ -229,7 +224,7 @@
 
 
 <div class="description">
-    <p>scope an object by it's UUID</p>
+    <p>basic function to add an object to a node</p>
 </div>
 
 
@@ -253,6 +248,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -265,18 +262,31 @@
 
         <tr>
             
-                <td class="name"><code>uuid</code></td>
+                <td class="name"><code>children</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
             
 
             
@@ -302,6 +312,11 @@
     
 
     
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="BaseObject.html#addNewChild">BaseObject#addNewChild</a>
+    </li></ul></dd>
+    
 
     
 
@@ -322,7 +337,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_uuidModule.js.html">lib/controller/uuidModule.js</a>, <a href="lib_controller_uuidModule.js.html#line39">line 39</a>
+        <a href="lib_model_baseClasses_classUtils.js.html">lib/model/baseClasses/classUtils.js</a>, <a href="lib_model_baseClasses_classUtils.js.html#line141">line 141</a>
     </li></ul></dd>
     
 
@@ -351,166 +366,7 @@
 
         
 <div class="param-desc">
-    <p>target object</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id=".indexNew"><span class="type-signature">(static) </span>indexNew<span class="signature">(self)</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>uuid generator and indexer</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>self</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_uuidModule.js.html">lib/controller/uuidModule.js</a>, <a href="lib_controller_uuidModule.js.html#line17">line 17</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>self</p>
+    <p>itself</p>
 </div>
 
 
