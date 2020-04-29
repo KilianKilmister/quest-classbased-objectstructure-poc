@@ -1,5 +1,13 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
+[Link toGitHub-Repo][repo]  
+[Link to GitHub-Pages][pages]
+
+[pages]:<https://kiliankilmister.github.io/quest-classbased-objectstructure-poc/>
+[repo]:<https://github.com/KilianKilmister/quest-classbased-objectstructure-poc>
+
 
 ## Main Features
 
