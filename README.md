@@ -3,27 +3,27 @@
 
 ## Main Features
 
-1. [**ES6-Class** based Inheritance][1]
-2. [Two Basic *Scripts* Showcasing the **PoC**][2]
+1. [ES6-Class based Inheritance][1]
+2. [Two Basic Scripts Showcasing the PoC][2]
 3. [High Degree of Isolation on every Object making `Code`-Execution Predictable][3]
-4. [Use of **JavaScript**-native `Proxys` Implemented deep in the Core `Code`][4]
+4. [Use of JavaScript-native `Proxys` Implemented deep in the Core `Code`][4]
 5. [Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games][5]
-6. [Fully Functional **Address-Module** able to Resolve both Absolute and Relative Addresses][6]
-7. [Simple **UUID-Creation-Module** and Global Index][7]
+6. [Fully Functional Address-Module able to Resolve both Absolute and Relative Addresses][6]
+7. [Simple UUID-Creation-Module and Global Index][7]
 8. [Basic Caching of Child-Objects allowing Fast Retrieval of Children][8]
 
-[1]:<#**es6-class**-based-inheritance>
-[2]:<#two-basic-*scripts*-showcasing-the-**poc**>
-[3]:<#high-degree-of-isolation-on-every-object-making-code-execution-predictable>
-[4]:<#use-of-**javascript**-native-proxys-implemented-deep-in-the-core-code>
+[1]:<#es6-class-based-inheritance>
+[2]:<#two-basic-scripts-showcasing-the-poc>
+[3]:<#High-Degree-of-Isolation-on-every-Object-helping-against-unpredictable-Code-Execution>
+[4]:<#use-of-javascript-native-proxys-implemented-deep-in-the-core-code>
 [5]:<#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games>
-[6]:<#fully-functional-**address-module**-able-to-resolve-both-absolute-and-relative-addresses>
+[6]:<#fully-functional-address-module-able-to-resolve-both-absolute-and-relative-addresses>
 [7]:<#examples-pulled-from-the-showcase-script>
-[8]:<#simple-**uuid-creation-module**-and-global-index>
+[8]:<#simple-uuid-creation-module-and-global-index>
 [9]:<#basic-caching-of-child-objects-allowing-fast-retrieval-of-children>
 
 
-## **ES6-Class** based Inheritance
+## ES6-Class based Inheritance
 
 A strict inheritance model to optimise runtime-execution and makes the program act
 more predictable. Currently it consists of two branches inheriting from a single
@@ -43,7 +43,7 @@ Forming the Super-Structure of the world and grouping programmatic environments.
 Forming the manipulatable world
 
 
-## Two Basic *Scripts* Showcasing the **PoC**
+## Two Basic Scripts Showcasing the PoC
 
 They can be used by running `bin/ex.js` and selecting the respective options when
 prompted.
@@ -68,7 +68,7 @@ object. Generates 32 objects in a few milliseconds
 Both Tasks write the resulting Root-Object to a `JSON` file (heavily shortened to
 a depth of about 5).  
 The API is (albeit messy) fully exposed and ready to be experimented upon. This
-**PoC** is also available as an NPM package that can can be downloaded and used as
+PoC is also available as an NPM package that can can be downloaded and used as
 a dependency.
 
 ```sh
@@ -76,7 +76,7 @@ npm install @slick_kilmister/quest-classbased-objstructure-poc
 ```
 
 
-## High Degree of Isolation on every Object making Code-Execution act Predictable
+## High Degree of Isolation on every Object helping against unpredictable Code-Execution
 
 High degrees of isolation were a design focus. Objects know only basic
 properties of the world around them. Every property escaping the objects scope
@@ -89,7 +89,7 @@ while source `code` gets more complex, it makes scripting simpler.
   local scope.
 
 
-## Use of **JavaScript**-native Proxys Implemented deep in the Core Code
+## Use of JavaScript-native Proxys Implemented deep in the Core Code
 
 The base-object-`constructor` (and thus everything that inherits from it)
 returns a `Proxy` with a specialized handler object enveloping it.
@@ -104,13 +104,13 @@ The `Proxy` serves three main purposes:
 3. Being Native-`Code`, they are incredibly efficient and with some simple
    `boolean`-pre-triggers they cause close to zero additional processing time and
    (when correctly configured) are basically impossible to circumvent.  
-   Case-and-Point: ALL objects in the example *scripts* are wrapped by a
+   Case-and-Point: ALL objects in the example scripts are wrapped by a
    `proxy`.
    And the design of the logging-to-console has more effect on execution speed than all
    the `proxies` combined.
 
-*They are making source `code` less intuitive, tho. but i think they are well worth
-it.*
+They are making source `code` less intuitive, tho. but i think they are well worth
+it.
 
 
 ## Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games
@@ -122,12 +122,12 @@ runtime smoother.
 
 ## Fully Functional Address Module able to Resolve both Absolute and Relative Addresses
 
-this **PoC** comes with a fully functional **Address-module** based on the NodeJS
-**`path`-module**. It currently features construction of the Absolute Address of an
+this PoC comes with a fully functional Address-module based on the NodeJS
+`path`-module. It currently features construction of the Absolute Address of an
 Object and resolving of relative addresses by only giving it start- and
 target-Object.  
-It is designed after **IPv6**, every parent acting as a DNS for its direct children.
-Each parent assigns a in-scope-unique **HEX**-based ID to each of it's children at their
+It is designed after IPv6, every parent acting as a DNS for its direct children.
+Each parent assigns a in-scope-unique HEX-based ID to each of it's children at their
 creation (or relocation). These are then joined by a `:` giving an easy to read
 and use address. eg: `:0:4:1:2:50` (leading `:` indicates the absolute root)
 Relative addresses are prefixed with a letter representing the scope of the last
@@ -143,28 +143,28 @@ the `.getRelativeAddress(target)`-method
 
 | represented by |            ROOT |            Realm |           World |           Area |           room |
 |----------------|----------------:|-----------------:|----------------:|---------------:|---------------:|
-| **leading-**   |             `:` |              `R` |             `W` |            `A` |            `r` |
+| leading-       |             `:` |              `R` |             `W` |            `A` |            `r` |
 | -----x------   | -------x------- | -------x-------- | -------x------- | -------x------ | -------x------ |
-| **from**       |   `:0:2:3:3:a8` |   `:0:2:2:1:22c` |  `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
-| **to**         |  `:0:2:7:2:198` | `:0:2:3:3:16e:0` |  `:0:2:2:4:1ff` | `:0:2:9:1:362` | `:0:2:a:2:335` |
-| **relative**   |     `W:7:2:198` |  ` W:3:3:16e:0 ` |       `A:4:1ff` |    `W:9:1:362` |    `W:a:2:335` |
+| from           |   `:0:2:3:3:a8` |   `:0:2:2:1:22c` |  `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
+| to             |  `:0:2:7:2:198` | `:0:2:3:3:16e:0` |  `:0:2:2:4:1ff` | `:0:2:9:1:362` | `:0:2:a:2:335` |
+| relative       |     `W:7:2:198` |  ` W:3:3:16e:0 ` |       `A:4:1ff` |    `W:9:1:362` |    `W:a:2:335` |
 | -----x------   | -------x------- | -------x-------- |  -------x------ | -------x------ | -------x------ |
-| **from**       |  `:0:2:2:1:372` |   `:0:2:2:4:24c` |  `:0:2:2:4:2c4` | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
-| **to**         |  `:0:2:8:2:2a2` |   `:0:2:9:2:341` |   `:0:2:8:2:9f` | `:0:2:a:1:36f` |  `:0:2:8:2:fb` |
-| **relative**   |     `W:8:2:2a2` |      `W:9:2:341` |      `W:8:2:9f` |    `W:a:1:36f` |     `W:8:2:fb` |
+| from           |  `:0:2:2:1:372` |   `:0:2:2:4:24c` |  `:0:2:2:4:2c4` | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
+| to             |  `:0:2:8:2:2a2` |   `:0:2:9:2:341` |   `:0:2:8:2:9f` | `:0:2:a:1:36f` |  `:0:2:8:2:fb` |
+| relative       |     `W:8:2:2a2` |      `W:9:2:341` |      `W:8:2:9f` |    `W:a:1:36f` |     `W:8:2:fb` |
 
-NOTE: *smaller subdivisions currently all are lead by `lower-case c` for container*
+NOTE: smaller subdivisions currently all are lead by `lower-case c` for container
 
 
-## Simple **UUID-Creation-Module** and Global Index
+## Simple UUID-Creation-Module and Global Index
 
 Every object is assigned a unique UUID at creation and is indexed with it.
-contrary to the ID used in the **Address-module**, the object keeps this one
+contrary to the ID used in the Address-module, the object keeps this one
 regardless of location and the UUID won't be given free at object destruction.
 This is a simple way to guarantee persistance of object-connections. eg: lock
 and key relation.  
 The UUID-Creator is simple and can be tweaked if necessary. Currently it
-guarantees uniqueness and generates a **HEX**-base ID of `8+4+4`-digits.
+guarantees uniqueness and generates a HEX-base ID of `8+4+4`-digits.
 eg: `4e71fff5-1757-1dc0`
 
 
