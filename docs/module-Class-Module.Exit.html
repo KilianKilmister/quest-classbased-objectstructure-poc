@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: BaseObject</title>
+    <title>JSDoc: Class: exports.Exit</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: BaseObject</h1>
+    <h1 class="page-title">Class: exports.Exit</h1>
 
     
 
@@ -29,9 +29,12 @@
 <header>
     
         <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="module-Class-Module.html">Class-Module</a>.</span>BaseObject<span class="signature">(options)</span><span class="type-signature"></span></h2>
+            <span class="ancestors"><a href="module-Class-Module.html">Class-Module</a>.</span>exports.Exit<span class="signature">(destination, options)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description"><p>the most basic object every object in game inherits from</p></div>
+            <div class="class-description"><p>Bare Bones, was not the focus of this PoC
+an object serving as an access node for a room
+it can be linked to any other exit or an abstract concept if needed
+these links are not subject to the dividers formed by WorldObject</p></div>
         
     
 </header>
@@ -46,7 +49,7 @@
     
 
     
-    <h4 class="name" id="BaseObject"><span class="type-signature"></span>new BaseObject<span class="signature">(options)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="exports.Exit"><span class="type-signature"></span>new exports.Exit<span class="signature">(destination, options)</span><span class="type-signature"></span></h4>
     
 
     
@@ -54,7 +57,7 @@
 
 
 <div class="description">
-    <p>Creates an instance of BaseObject, it's proxy, and gives it a UID</p>
+    <p>Creates an instance of Exit.</p>
 </div>
 
 
@@ -90,7 +93,7 @@
 
         <tr>
             
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>destination</code></td>
             
 
             <td class="type">
@@ -106,222 +109,20 @@
 
             
 
-            <td class="description last"><p>options object</p></td>
+            <td class="description last"></td>
         </tr>
 
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_model_baseClasses_classUtils.js.html">lib/model/baseClasses/classUtils.js</a>, <a href="lib_model_baseClasses_classUtils.js.html#line95">line 95</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="children"><span class="type-signature">(readonly) </span>children<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    <p>getter that updates the cache and returns all the direct and indirect
-children. Bare bones at this point</p>
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_model_baseClasses_classUtils.js.html">lib/model/baseClasses/classUtils.js</a>, <a href="lib_model_baseClasses_classUtils.js.html#line130">line 130</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="getRelativeAddress"><span class="type-signature"></span>getRelativeAddress<span class="signature">(target)</span><span class="type-signature"> &rarr; {String}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>resolves the absolute address of two objects and reduces it to the last
-common node</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>target</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">object</span>
 
 
             
@@ -372,7 +173,7 @@ common node</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_model_baseClasses_classUtils.js.html">lib/model/baseClasses/classUtils.js</a>, <a href="lib_model_baseClasses_classUtils.js.html#line121">line 121</a>
+        <a href="lib_model_baseClasses_gameObjectClasses.js.html">lib/model/baseClasses/gameObjectClasses.js</a>, <a href="lib_model_baseClasses_gameObjectClasses.js.html#line39">line 39</a>
     </li></ul></dd>
     
 
@@ -397,34 +198,39 @@ common node</p>
 
 
 
-<h5>Returns:</h5>
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
 
         
-<div class="param-desc">
-    <p>relative address</p>
-</div>
 
 
+    <ul>
+        <li>GameObject</li>
+    </ul>
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
 
     
 
+    
 
+    
 
+    
 
+    
 
-        
+    
+
+    
+
     
 
     

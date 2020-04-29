@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: Address-Module</title>
+    <title>JSDoc: Class: GameObject</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: Address-Module</h1>
+    <h1 class="page-title">Class: GameObject</h1>
 
     
 
@@ -28,8 +28,13 @@
 
 <header>
     
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-Class-Module.html">Class-Module</a>.</span>GameObject<span class="signature">(options)</span><span class="type-signature"></span></h2>
         
-            
+            <div class="class-description"><p>Bare Bones, was not the focus of this PoC
+the base object for anything that needs to be actively manipulated
+in contrast to WorldObjects, these actively expose and share data about
+themselves within their division</p></div>
         
     
 </header>
@@ -38,20 +43,78 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>stripped down version of the NodeJS <code>path</code>-module tweaked to fit address resolving</p></div>
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="GameObject"><span class="type-signature"></span>new GameObject<span class="signature">(options)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Creates an instance of GameObject.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
         
 
         
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
             
 
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
 
 
+            
+            </td>
 
+            
 
+            
 
+            <td class="description last"></td>
+        </tr>
 
-
-
+    
+    </tbody>
+</table>
 
 
 
@@ -87,7 +150,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_addressModule.js.html">lib/controller/addressModule.js</a>, <a href="lib_controller_addressModule.js.html#line1">line 1</a>
+        <a href="lib_model_baseClasses_gameObjectClasses.js.html">lib/model/baseClasses/gameObjectClasses.js</a>, <a href="lib_model_baseClasses_gameObjectClasses.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -117,9 +180,19 @@
 
 
 
-        
     
     </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="BaseObject.html">BaseObject</a></li>
+    </ul>
+
 
     
 
@@ -144,7 +217,7 @@
     
 
     
-    <h4 class="name" id="~join"><span class="type-signature">(inner) </span>join<span class="signature">(&hellip;args)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    <h4 class="name" id="addNewChild"><span class="type-signature"></span>addNewChild<span class="signature">(&hellip;children)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
 
     
@@ -152,7 +225,7 @@
 
 
 <div class="description">
-    <p>simple joiner</p>
+    <p>basic function to add an object to a node</p>
 </div>
 
 
@@ -190,13 +263,16 @@
 
         <tr>
             
-                <td class="name"><code>args</code></td>
+                <td class="name"><code>children</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;String></span>
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Array.&lt;Object></span>
 
 
             
@@ -216,7 +292,7 @@
 
             
 
-            <td class="description last"><p>input strings</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -236,6 +312,11 @@
 
     
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="BaseObject.html#addNewChild">BaseObject#addNewChild</a>
+    </li></ul></dd>
     
 
     
@@ -257,7 +338,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_addressModule.js.html">lib/controller/addressModule.js</a>, <a href="lib_controller_addressModule.js.html#line35">line 35</a>
+        <a href="lib_model_baseClasses_classUtils.js.html">lib/model/baseClasses/classUtils.js</a>, <a href="lib_model_baseClasses_classUtils.js.html#line140">line 140</a>
     </li></ul></dd>
     
 
@@ -286,7 +367,7 @@
 
         
 <div class="param-desc">
-    <p>joined Address</p>
+    <p>itself</p>
 </div>
 
 
@@ -297,189 +378,7 @@
     </dt>
     <dd>
         
-<span class="param-type">String</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="~relative"><span class="type-signature">(inner) </span>relative<span class="signature">(from, to)</span><span class="type-signature"> &rarr; {String}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    <p>returns address resolved to last common ancestor</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>from</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>to</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_controller_addressModule.js.html">lib/controller/addressModule.js</a>, <a href="lib_controller_addressModule.js.html#line55">line 55</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>relative Address</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">String</span>
+<span class="param-type">Object</span>
 
 
     </dd>
