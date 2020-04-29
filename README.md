@@ -1,10 +1,11 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+| **Links**                                                   |                          |
+|-------------------------------------------------------------|--------------------------|
+| [Link toGitHub-Repo][repo]<br>[Link to GitHub-Pages][pages] | [![standard]][standardl] |
 
-[Link toGitHub-Repo][repo]  
-[Link to GitHub-Pages][pages]
-
+[standard]:<https://cdn.rawgit.com/standard/standard/master/badge.svg>
+[standardl]:<https://github.com/standard/standard>
 [pages]:<https://kiliankilmister.github.io/quest-classbased-objectstructure-poc/>
 [repo]:<https://github.com/KilianKilmister/quest-classbased-objectstructure-poc>
 
@@ -13,8 +14,8 @@
 
 1. [ES6-Class based Inheritance][1]
 2. [Two Basic Scripts Showcasing the PoC][2]
-3. [High Degree of Isolation on every Object making `Code`-Execution Predictable][3]
-4. [Use of JavaScript-native `Proxys` Implemented deep in the Core `Code`][4]
+3. [High Degree of Isolation on every Object making Code-Execution Predictable][3]
+4. [Use of JavaScript-native Proxys Implemented deep in the Core Code][4]
 5. [Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games][5]
 6. [Fully Functional Address-Module able to Resolve both Absolute and Relative Addresses][6]
 7. [Simple UUID-Creation-Module and Global Index][7]
