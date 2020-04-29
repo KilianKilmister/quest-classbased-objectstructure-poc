@@ -31,5 +31,5 @@
     "run": "/usr/bin/env node \"/Users/kilian/dev/Quest/classbased-objectstructure-poc/bin/ex.js\""
   },
   "type": "module",
-  "version": "1.0.6"
+  "version": "1.0.7"
 }
