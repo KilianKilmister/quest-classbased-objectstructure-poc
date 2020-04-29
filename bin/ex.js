@@ -59,6 +59,7 @@ function structured () {
     if (err) throw err
     console.log('done')
   })
+  console.log(Quest.indexNew({}))
 }
 
 /**
@@ -109,6 +110,8 @@ async function unstructured () {
   for (let i = 0; i < 4; i++) {
     const a = getRandomElement(all)
     const b = getRandomElement(all)
+    console.log('>> ' + a.address)
+    console.log('>> ' + b.address)
     console.log('>> ' + a.getRelativeAddress(b))
   }
   process.env.finished = true
