@@ -18,9 +18,8 @@
 [4]:<#use-of-javascript-native-proxys-implemented-deep-in-the-core-code>
 [5]:<#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games>
 [6]:<#fully-functional-address-module-able-to-resolve-both-absolute-and-relative-addresses>
-[7]:<#examples-pulled-from-the-showcase-script>
-[8]:<#simple-uuid-creation-module-and-global-index>
-[9]:<#basic-caching-of-child-objects-allowing-fast-retrieval-of-children>
+[7]:<#simple-uuid-creation-module-and-global-index>
+[8]:<#basic-caching-of-child-objects-allowing-fast-retrieval-of-children>
 
 
 ## ES6-Class based Inheritance
