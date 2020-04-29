@@ -14,8 +14,8 @@
 
 [1]:<#**es6-class**-based-inheritance>
 [2]:<#two-basic-*scripts*-showcasing-the-**poc**>
-[3]:<#high-degree-of-isolation-on-every-object-making-`code`-execution-predictable>
-[4]:<#use-of-**javascript**-native-`proxys`-implemented-deep-in-the-core-`code`>
+[3]:<#high-degree-of-isolation-on-every-object-making-code-execution-predictable>
+[4]:<#use-of-**javascript**-native-proxys-implemented-deep-in-the-core-code>
 [5]:<#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games>
 [6]:<#fully-functional-**address-module**-able-to-resolve-both-absolute-and-relative-addresses>
 [7]:<#examples-pulled-from-the-showcase-script>
@@ -89,7 +89,7 @@ while source `code` gets more complex, it makes scripting simpler.
   local scope.
 
 
-## Use of **JavaScript**-native Proxys Implemented deep in the Core `Code`
+## Use of **JavaScript**-native Proxys Implemented deep in the Core Code
 
 The base-object-`constructor` (and thus everything that inherits from it)
 returns a `Proxy` with a specialized handler object enveloping it.
@@ -141,17 +141,17 @@ the `.getRelativeAddress(target)`-method
 
 ### Examples Pulled from the Showcase-Script
 
-| represented by |      ROOT       |      Realm       |      World      |      Area      |      room      |
-|----------------|:---------------:|:----------------:|:---------------:|:--------------:|:--------------:|
-| **leading-**   |       `:`       |       `R`        |       `W`       |      `A`       |      `r`       |
+| represented by |            ROOT |            Realm |           World |           Area |           room |
+|----------------|----------------:|-----------------:|----------------:|---------------:|---------------:|
+| **leading-**   |             `:` |              `R` |             `W` |            `A` |            `r` |
 | -----x------   | -------x------- | -------x-------- | -------x------- | -------x------ | -------x------ |
-| **from**       |  `:0:2:3:3:a8`  |  `:0:2:2:1:22c`  | `:0:2:2:2:32e`  | `:0:2:2:4:52`  | `:0:2:7:1:1d0` |
-| **to**         | `:0:2:7:2:198`  | `:0:2:3:3:16e:0` | `:0:2:2:4:1ff`  | `:0:2:9:1:362` | `:0:2:a:2:335` |
-| **relative**   |   `W:7:2:198`   | ` W:3:3:16e:0 `  |    `A:4:1ff`    |  `W:9:1:362`   |  `W:a:2:335`   |
-| -----x------   | -------x------- | -------x-------- | -------x------  | -------x------ | -------x------ |
-| **from**       | `:0:2:2:1:372`  |  `:0:2:2:4:24c`  | `:0:2:2:4:2c4`  | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
-| **to**         | `:0:2:8:2:2a2`  |  `:0:2:9:2:341`  |  `:0:2:8:2:9f`  | `:0:2:a:1:36f` | `:0:2:8:2:fb`  |
-| **relative**   |   `W:8:2:2a2`   |   `W:9:2:341`    |   `W:8:2:9f`    |  `W:a:1:36f`   |   `W:8:2:fb`   |
+| **from**       |   `:0:2:3:3:a8` |   `:0:2:2:1:22c` |  `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
+| **to**         |  `:0:2:7:2:198` | `:0:2:3:3:16e:0` |  `:0:2:2:4:1ff` | `:0:2:9:1:362` | `:0:2:a:2:335` |
+| **relative**   |     `W:7:2:198` |  ` W:3:3:16e:0 ` |       `A:4:1ff` |    `W:9:1:362` |    `W:a:2:335` |
+| -----x------   | -------x------- | -------x-------- |  -------x------ | -------x------ | -------x------ |
+| **from**       |  `:0:2:2:1:372` |   `:0:2:2:4:24c` |  `:0:2:2:4:2c4` | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
+| **to**         |  `:0:2:8:2:2a2` |   `:0:2:9:2:341` |   `:0:2:8:2:9f` | `:0:2:a:1:36f` |  `:0:2:8:2:fb` |
+| **relative**   |     `W:8:2:2a2` |      `W:9:2:341` |      `W:8:2:9f` |    `W:a:1:36f` |     `W:8:2:fb` |
 
 NOTE: *smaller subdivisions currently all are lead by `lower-case c` for container*
 
