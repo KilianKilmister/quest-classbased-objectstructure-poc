@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: controller/addressModule.js</title>
+    <title>JSDoc: Source: controller/uuidModule.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: controller/addressModule.js</h1>
+    <h1 class="page-title">Source: controller/uuidModule.js</h1>
 
     
 
@@ -27,93 +27,45 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * stripped down version of the NodeJS `path`-module tweaked to fit address resolving
- * @module Address-Module
+ * module for assigning UUIDs
+ * @module UUID-Module
  */
-
-function normalize (_path) {
-  let path = _path.toString()
-  validateString(path, 'path')
-
-  if (path.length === 0) { return '.' }
-
-  const isAbsolute = path.startsWith('ROOT')
-  const trailingSeparator =
-      path.charCodeAt(path.length - 1) === ':'
-
-  if (path.length === 0) {
-    if (isAbsolute) { return ':' }
-    return trailingSeparator ? '.:' : '.'
-  }
-  if (trailingSeparator) { path += ':' }
-
-  return isAbsolute ? `${path.slice(4)}` : path
-}
-
-function isAbsolute (path) {
-  validateString(path, 'path')
-  return path.length > 0 &amp;&amp; path.startsWith('ROOT')
-}
 
 /**
- * simple joiner
- * @param {String[]} args input strings
- * @returns {String} joined Address
+ * @const {Object} the universal UUID-index
+ * *should probably be integrated into ROOT object*
  */
-function join (...args) {
-  if (args.length === 0) { return '.' }
-  let joined
-  for (let i = 0; i &lt; args.length; ++i) {
-    const arg = args[i]
-    validateString(arg, 'path')
-    if (arg &amp;&amp; arg.length > 0) {
-      if (joined === undefined) { joined = arg } else { joined += `:${arg}` }
+export const UIDDictionary = {}
+
+/**
+ * uuid generator and indexer
+ * @param {Object} self
+ * @returns {Object} self
+ */
+export function indexNew (self) {
+  let uuid
+  do {
+    var S4 = function () {
+      return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)
     }
+    uuid = S4() + S4() + '-' + S4() + '-' + S4()
   }
-  if (joined === undefined) { return '.' }
-  return normalize(joined)
+  while (UIDDictionary[uuid])
+  if (self.isGlobalRoot) {
+    uuid = 'ROOT'
+  }
+  UIDDictionary[uuid] = self
+  self.uuid = uuid
+  return self
 }
 
 /**
- * returns address resolved to last common ancestor
- * @param {String} from
- * @param {String} to
- * @returns {String} relative Address
+ * scope an object by it's UUID
+ * @param {string} uuid
+ * @returns {Object} target object
  */
-function relative (from, to) {
-  validateString(from, 'from')
-  validateString(to, 'to')
-  from = from.split(':')
-  to = to.split(':')
-
-  const out = Array.from(to)
-
-  const map = ['ROOT', 'R', 'W', 'A', 'r']
-
-  let index = 0
-  while (true) {
-    if (from[index] !== to[index]) break
-    out.shift()
-    index++
-  }
-  return join(map[index - 1] || 'c', ...out)
-}
-
-function validateString (value, name) {
-  if (value.split(':').length &lt;= 1) return
-  const path = value.slice(value.indexOf(':'))
-  const hexRE = /^[.:0-9A-F]*$/i
-  if (!hexRE.test(path)) {
-    console.log(value)
-    throw new Error('invalid address: `' + value + '`')
-  }
-}
-
-export const qAddress = {
-  normalize,
-  isAbsolute,
-  join,
-  relative
+export function getObjectFromUID (uuid) {
+  return UIDDictionary[uuid]
 }
 </code></pre>
         </article>

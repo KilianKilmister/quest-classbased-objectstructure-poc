@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+/**
+ * example script
+ * @module executable
+ */
+
 import * as Quest from '../lib/main.js'
 // node internals
 import * as fs from 'fs'

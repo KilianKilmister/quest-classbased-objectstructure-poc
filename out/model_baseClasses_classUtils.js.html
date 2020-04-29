@@ -26,9 +26,14 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { qAddress, indexNew } from '../../controller/controller.js'
+            <pre class="prettyprint source linenums"><code>/**
+ * Class-Module
+ * @module Class-Module
+ */
 
-// enum listing levels
+import { qAddress, indexNew } from '../../controller/controller.js'
+
+/** @const {Object} enum listing Plains */
 export const plains = {
   ROOT: 'root',
   REALM: 'realm',
@@ -40,7 +45,10 @@ export const plains = {
   EXIT: 'exit'
 }
 
-// error enum
+/**
+ * @const {Object} enum for error templating
+ * *not properly implemented*
+ */
 const qErr = {
   /**
    * some error presets, unfinished
@@ -53,13 +61,10 @@ const qErr = {
 /**
  * Proxy handler that wraps every object. can check permissions and can be used to store
  * values that should not be known to the object itself like absolute Address
- * @export
- * @class BaseProxy
  */
 export class BaseProxy {
   /**
-   * getter trap. [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
-   * @memberof BaseProxy
+   * getter trap. [Link]
    */
   get (target, propertyKey, receiver) {
     if (process.env.finished) return Reflect.get(...arguments)
@@ -81,8 +86,7 @@ export class BaseProxy {
   }
 
   /**
-   * setter trap. [Link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
-   * @memberof BaseProxy
+   * setter trap. [Link]
    */
   set (target, propertyKey, value, receiver) {
     switch (true) {
@@ -110,15 +114,11 @@ export class BaseProxy {
 
 /**
  * the most basic object every object in game inherits from
- *
- * @export
- * @class BaseObject
  */
 export class BaseObject {
   /**
-   *Creates an instance of BaseObject.
-   * @param {object} [options={}]
-   * @memberof BaseObject
+   *Creates an instance of BaseObject, it's proxy, and gives it a UID
+   * @param {object} options - options object
    */
   constructor (options = {}) {
     // root check
@@ -143,9 +143,8 @@ export class BaseObject {
   /**
    *  resolves the absolute address of two objects and reduces it to the last
    *  common node
-   * @param {object} target
-   * @returns relative address
-   * @memberof BaseObject
+   * @param {Object} target
+   * @returns {String} relative address
    */
   getRelativeAddress (target) {
     return qAddress.relative(this.address, target.address)
@@ -155,7 +154,6 @@ export class BaseObject {
    * getter that updates the cache and returns all the direct and indirect
    * children. Bare bones at this point
    * @readonly
-   * @memberof BaseObject
    */
   get children () {
     return Object.values(this.childCache.getCache())
@@ -163,8 +161,8 @@ export class BaseObject {
 
   /**
    * basic function to add an object to a node
-   * @param {Array|Object} children
-   * @returns itself
+   * @param {Object|Object[]} children
+   * @returns {Object} itself
    * @memberof BaseObject
    */
   addNewChild (...children) {
@@ -176,15 +174,14 @@ export class BaseObject {
 }
 
 /**
- * Caching object that handles updating and distribution of child nodes. somewhat bare-bones
- * @class ChildCache
+ * Caching object that handles updating and distribution of child nodes.
+ * Somewhat bare-bones
  */
 class ChildCache {
   /**
    *Creates an instance of ChildCache.
-   * @param {object} parent
-   * @param {object} options
-   * @memberof ChildCache
+   * @param {Object} parent
+   * @param {Object} options
    */
   constructor (parent, options) {
     this.cache = {}
@@ -194,8 +191,7 @@ class ChildCache {
 
   /**
    * assigns unique-within-scope id to child
-   * @param {object} child
-   * @memberof ChildCache
+   * @param {Object} child
    */
   assignID (child) {
     let id = 0x0
@@ -206,8 +202,7 @@ class ChildCache {
   }
 
   /**
-   * basic cache update-function, needs fleshing out to optimise memory
-   * @memberof ChildCache
+   * basic cache update-function, needs fleshing out to optimise memory usage
    */
   update () {
     if (!this.hasChanged) return
@@ -221,8 +216,7 @@ class ChildCache {
   }
 
   /**
-   * force-updating
-   * @memberof ChildCache
+   * force-updating cache
    */
   forceUpdate () {
     this.hasChanged = true
@@ -231,8 +225,7 @@ class ChildCache {
 
   /**
    * getter + force-update, needs optimization
-   * @returns cache-object
-   * @memberof ChildCache
+   * @returns {Object} cache-object
    */
   getCache () {
     this.forceUpdate() // FIXME
@@ -241,8 +234,7 @@ class ChildCache {
 
   /**
    * basic internal node adder
-   * @param {object} children
-   * @memberof ChildCache
+   * @param {Object} children
    */
   async add (...children) {
     if (!this.childNodes) this.childNodes = []
@@ -255,9 +247,11 @@ class ChildCache {
   }
 }
 
-// create the global ROOT object. serves as an index and control node
-// needs proper implementation
+/** @const {Object} The Main Game-Instance */
 export var game = new BaseObject({ isGlobalRoot: true, plain: 'ROOT' })
+/**
+ *  [Link]:&lt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler>
+ */
 </code></pre>
         </article>
     </section>
@@ -268,13 +262,13 @@ export var game = new BaseObject({ isGlobalRoot: true, plain: 'ROOT' })
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Area.html">Area</a></li><li><a href="Area.exports.Area.html">exports.Area</a></li><li><a href="BaseObject.html">BaseObject</a></li><li><a href="BaseObject.exports.BaseObject.html">exports.BaseObject</a></li><li><a href="BaseProxy.html">BaseProxy</a></li><li><a href="ChildCache.html">ChildCache</a></li><li><a href="ChildCache.ChildCache.html">ChildCache</a></li><li><a href="Exit.html">Exit</a></li><li><a href="Exit.exports.Exit.html">exports.Exit</a></li><li><a href="GameObject.html">GameObject</a></li><li><a href="GameObject.exports.GameObject.html">exports.GameObject</a></li><li><a href="Isolate.html">Isolate</a></li><li><a href="Isolate.exports.Isolate.html">exports.Isolate</a></li><li><a href="Realm.html">Realm</a></li><li><a href="Realm.exports.Realm.html">exports.Realm</a></li><li><a href="Room.html">Room</a></li><li><a href="Room.exports.Room.html">exports.Room</a></li><li><a href="World.html">World</a></li><li><a href="World.exports.World.html">exports.World</a></li><li><a href="WorldObject.html">WorldObject</a></li><li><a href="WorldObject.exports.WorldObject.html">exports.WorldObject</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getObjectFromUID">getObjectFromUID</a></li><li><a href="global.html#indexNew">indexNew</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#validateString">validateString</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Address-Module.html">Address-Module</a></li><li><a href="module-Class-Module.html">Class-Module</a></li><li><a href="module-UUID-Module.html">UUID-Module</a></li></ul><h3>Classes</h3><ul><li><a href="Area.html">Area</a></li><li><a href="Area.exports.Area.html">exports.Area</a></li><li><a href="Exit.html">Exit</a></li><li><a href="Exit.exports.Exit.html">exports.Exit</a></li><li><a href="GameObject.html">GameObject</a></li><li><a href="GameObject.exports.GameObject.html">exports.GameObject</a></li><li><a href="Isolate.html">Isolate</a></li><li><a href="Isolate.exports.Isolate.html">exports.Isolate</a></li><li><a href="module-Class-Module.BaseObject.html">BaseObject</a></li><li><a href="module-Class-Module.BaseProxy.html">BaseProxy</a></li><li><a href="module-Class-Module-ChildCache.html">ChildCache</a></li><li><a href="Realm.html">Realm</a></li><li><a href="Realm.exports.Realm.html">exports.Realm</a></li><li><a href="Room.html">Room</a></li><li><a href="Room.exports.Room.html">exports.Room</a></li><li><a href="World.html">World</a></li><li><a href="World.exports.World.html">exports.World</a></li><li><a href="WorldObject.html">WorldObject</a></li><li><a href="WorldObject.exports.WorldObject.html">exports.WorldObject</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Wed Apr 29 2020 12:06:43 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Wed Apr 29 2020 12:36:27 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
