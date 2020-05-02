@@ -1,8 +1,16 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
-| [Link to QuestJS-Repo][Quest]                               | [Link to GitHub-Repo][repo] |
-|-------------------------------------------------------------|-----------------------------|
-| [Link to GitHub-Pages][pages]<br>[Link to NPM-Package][NPM] | [![standard]][standardl]    |
+![GitHub](https://img.shields.io/github/license/kiliankilmister/quest-classbased-objstructure-poc)
+[![Issues](https://img.shields.io/github/issues-raw/kiliankilmister/quest-classbased-objstructure-poc.svg?maxAge=25000)](https://github.com/kiliankilmister/quest-classbased-objstructure-poc/issues)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+![GitHub contributors](https://img.shields.io/github/contributors/kiliankilmister/quest-classbased-objstructure-poc.svg?style=flat)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/kiliankilmister/quest-classbased-objstructure-poc.svg?style=flat)
+![node](https://img.shields.io/node/v/@slick_kilmister/quest-classbased-objstructure-poc)<br>
+[![standard]][standardl]
+[![NPM](https://nodei.co/npm/@slick_kilmister/quest-classbased-objstructure-poc.png?downloads=true)](https://www.npmjs.com/package/@slick_kilmister/quest-classbased-objstructure-poc)
+
+
+| [Link to QuestJS-Repo][Quest] | [Link to GitHub-Repo][repo] | [Link to GitHub-Pages][pages] | [Link to NPM-Package][NPM] |
 
 [Quest]:<https://github.com/ThePix/QuestJS>
 [NPM]:<https://www.npmjs.com/package/@slick_kilmister/quest-classbased-objstructure-poc>
@@ -15,22 +23,24 @@
 ## Main Features
 
 1. [ES6-Class based Inheritance][1]
-2. [Two Basic Scripts Showcasing the PoC][2]
-3. [High Degree of Isolation on every Object making Code-Execution Predictable][3]
-4. [Use of JavaScript-native Proxys Implemented deep in the Core Code][4]
-5. [Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games][5]
-6. [Fully Functional Address-Module able to Resolve both Absolute and Relative Addresses][6]
-7. [Simple UUID-Creation-Module and Global Index][7]
-8. [Basic Caching of Child-Objects allowing Fast Retrieval of Children][8]
+2. [Game-Skeleton overhaul][2]
+3. [Two Basic Scripts Showcasing the PoC][3]
+4. [High Degree of Isolation on every Object making Code-Execution Predictable][4]
+5. [Use of JavaScript-native Proxys Implemented deep in the Core Code][5]
+6. [Fully Dynamic Object Generation Allowing Runtime Creation of Complete Games][6]
+7. [Fully Functional Address-Module able to Resolve both Absolute and Relative Addresses][7]
+8. [Simple UUID-Creation-Module and Global Index][8]
+9. [Basic Caching of Child-Objects allowing Fast Retrieval of Children][9]
 
 [1]:<#es6-class-based-inheritance>
-[2]:<#two-basic-scripts-showcasing-the-poc>
-[3]:<#High-Degree-of-Isolation-on-every-Object-helping-against-unpredictable-Code-Execution>
-[4]:<#use-of-javascript-native-proxys-implemented-deep-in-the-core-code>
-[5]:<#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games>
-[6]:<#fully-functional-address-module-able-to-resolve-both-absolute-and-relative-addresses>
-[7]:<#simple-uuid-creation-module-and-global-index>
-[8]:<#basic-caching-of-child-objects-allowing-fast-retrieval-of-children>
+[2]:<#game-skeleton-overhaul>
+[3]:<#two-basic-scripts-showcasing-the-poc>
+[4]:<#High-Degree-of-Isolation-on-every-Object-helping-against-unpredictable-Code-Execution>
+[5]:<#use-of-javascript-native-proxys-implemented-deep-in-the-core-code>
+[6]:<#fully-dynamic-object-generation-allowing-runtime-creation-of-complete-games>
+[7]:<#fully-functional-address-module-able-to-resolve-both-absolute-and-relative-addresses>
+[8]:<#simple-uuid-creation-module-and-global-index>
+[9]:<#basic-caching-of-child-objects-allowing-fast-retrieval-of-children>
 
 
 ## ES6-Class based Inheritance
@@ -38,19 +48,12 @@
 A strict inheritance model to optimise runtime-execution and makes the program act
 more predictable. Currently it consists of two branches inheriting from a single
 Node. They are currently mostly representational but can easily be expanded
-upon.  
-The two branches are: (names are subject to change)
+upon. [See the Class-Module for more details][Class-Module]
+
+[Class-Module]:<class-module.md>
 
 
-### World-Objects
-
-Forming the Super-Structure of the world and grouping programmatic environments.
-
-
-### Game-Objects
-
-
-Forming the manipulatable world
+## Game-Skeleton overhaul
 
 
 ## Two Basic Scripts Showcasing the PoC
@@ -151,17 +154,11 @@ the `.getRelativeAddress(target)`-method
 
 ### Examples Pulled from the Showcase-Script
 
-| represented by |            ROOT |            Realm |           World |           Area |           room |
-|----------------|----------------:|-----------------:|----------------:|---------------:|---------------:|
-| leading-       |             `:` |              `R` |             `W` |            `A` |            `r` |
-| -----x------   | -------x------- | -------x-------- | -------x------- | -------x------ | -------x------ |
-| from           |   `:0:2:3:3:a8` |   `:0:2:2:1:22c` |  `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
-| to             |  `:0:2:7:2:198` | `:0:2:3:3:16e:0` |  `:0:2:2:4:1ff` | `:0:2:9:1:362` | `:0:2:a:2:335` |
-| relative       |     `W:7:2:198` |  ` W:3:3:16e:0 ` |       `A:4:1ff` |    `W:9:1:362` |    `W:a:2:335` |
-| -----x------   | -------x------- | -------x-------- |  -------x------ | -------x------ | -------x------ |
-| from           |  `:0:2:2:1:372` |   `:0:2:2:4:24c` |  `:0:2:2:4:2c4` | `:0:2:2:3:114` | `:0:2:2:3:1bb` |
-| to             |  `:0:2:8:2:2a2` |   `:0:2:9:2:341` |   `:0:2:8:2:9f` | `:0:2:a:1:36f` |  `:0:2:8:2:fb` |
-| relative       |     `W:8:2:2a2` |      `W:9:2:341` |      `W:8:2:9f` |    `W:a:1:36f` |     `W:8:2:fb` |
+| ex       |                |                  |                |                |                |
+| -------- | -------------: | ---------------: | -------------: | -------------: | -------------: |
+| from     |  `:0:2:3:3:a8` |   `:0:2:2:1:22c` | `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
+| to       | `:0:2:7:2:198` | `:0:2:3:3:16e:0` | `:0:2:2:4:1ff` | `:0:2:9:1:362` | `:0:2:a:2:335` |
+| relative |    `W:7:2:198` |  ` W:3:3:16e:0 ` |      `A:4:1ff` |    `W:9:1:362` |    `W:a:2:335` |
 
 NOTE: smaller subdivisions currently all are lead by `lower-case c` for container
 
@@ -183,7 +180,7 @@ eg: `4e71fff5-1757-1dc0`
 The ChildCache-Object allows for some basic caching. It's based on an
 independent class outside the inheritance tree as a refracturing measure.
 It works as a mixin of sort and is created when first needed. So objects without
-any children don't try to start caching  
+any children don't try to start caching.  
 It's not really supposed to be directly accessed but works as an extension of
 the base-class. Its methods being mainly used by the parent object. and serving
 as a Node to quickly easily connect (grand-)children to their respective

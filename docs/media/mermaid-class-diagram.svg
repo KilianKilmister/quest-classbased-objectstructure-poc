@@ -1,0 +1,299 @@
+<svg id="mermaid-1588232496574" width="1454.6328125"
+  xmlns="http://www.w3.org/2000/svg" height="651.90625" viewBox="200 -10 976.421875 631.90625">
+  <style>#mermaid-1588232496574 .label{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);color:#333}#mermaid-1588232496574 .label text{fill:#333}#mermaid-1588232496574 .node rect,#mermaid-1588232496574 .node circle,#mermaid-1588232496574 .node ellipse,#mermaid-1588232496574 .node polygon,#mermaid-1588232496574 .node path{fill:#cde498;stroke:#13540c;stroke-width:1px}#mermaid-1588232496574 .node .label{text-align:center}#mermaid-1588232496574 .node.clickable{cursor:pointer}#mermaid-1588232496574 .arrowheadPath{fill:green}#mermaid-1588232496574 .edgePath .path{stroke:green;stroke-width:1.5px}#mermaid-1588232496574 .edgeLabel{background-color:#e8e8e8;text-align:center}#mermaid-1588232496574 .cluster rect{fill:#cdffb2;stroke:#6eaa49;stroke-width:1px}#mermaid-1588232496574 .cluster text{fill:#333}#mermaid-1588232496574 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:12px;background:#cdffb2;border:1px solid #6eaa49;border-radius:2px;pointer-events:none;z-index:100}#mermaid-1588232496574 .actor{stroke:#13540c;fill:#cde498}#mermaid-1588232496574 text.actor{fill:#000;stroke:none}#mermaid-1588232496574 .actor-line{stroke:grey}#mermaid-1588232496574 .messageLine0{stroke-width:1.5;stroke-dasharray:'2 2';stroke:#333}#mermaid-1588232496574 .messageLine1{stroke-width:1.5;stroke-dasharray:'2 2';stroke:#333}#mermaid-1588232496574 #arrowhead{fill:#333}#mermaid-1588232496574 .sequenceNumber{fill:#fff}#mermaid-1588232496574 #sequencenumber{fill:#333}#mermaid-1588232496574 #crosshead path{fill:#333 !important;stroke:#333 !important}#mermaid-1588232496574 .messageText{fill:#333;stroke:none}#mermaid-1588232496574 .labelBox{stroke:#326932;fill:#cde498}#mermaid-1588232496574 .labelText{fill:#000;stroke:none}#mermaid-1588232496574 .loopText{fill:#000;stroke:none}#mermaid-1588232496574 .loopLine{stroke-width:2;stroke-dasharray:'2 2';stroke:#326932}#mermaid-1588232496574 .note{stroke:#6eaa49;fill:#fff5ad}#mermaid-1588232496574 .noteText{fill:black;stroke:none;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:14px}#mermaid-1588232496574 .activation0{fill:#f4f4f4;stroke:#666}#mermaid-1588232496574 .activation1{fill:#f4f4f4;stroke:#666}#mermaid-1588232496574 .activation2{fill:#f4f4f4;stroke:#666}#mermaid-1588232496574 .mermaid-main-font{font-family:"trebuchet ms", verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .section{stroke:none;opacity:0.2}#mermaid-1588232496574 .section0{fill:#6eaa49}#mermaid-1588232496574 .section2{fill:#6eaa49}#mermaid-1588232496574 .section1,#mermaid-1588232496574 .section3{fill:#fff;opacity:0.2}#mermaid-1588232496574 .sectionTitle0{fill:#333}#mermaid-1588232496574 .sectionTitle1{fill:#333}#mermaid-1588232496574 .sectionTitle2{fill:#333}#mermaid-1588232496574 .sectionTitle3{fill:#333}#mermaid-1588232496574 .sectionTitle{text-anchor:start;font-size:11px;text-height:14px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .grid .tick{stroke:#d3d3d3;opacity:0.8;shape-rendering:crispEdges}#mermaid-1588232496574 .grid .tick text{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .grid path{stroke-width:0}#mermaid-1588232496574 .today{fill:none;stroke:red;stroke-width:2px}#mermaid-1588232496574 .task{stroke-width:2}#mermaid-1588232496574 .taskText{text-anchor:middle;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .taskText:not([font-size]){font-size:11px}#mermaid-1588232496574 .taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}#mermaid-1588232496574 .task.clickable{cursor:pointer}#mermaid-1588232496574 .taskText.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588232496574 .taskTextOutsideLeft.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588232496574 .taskTextOutsideRight.clickable{cursor:pointer;fill:#003163 !important;font-weight:bold}#mermaid-1588232496574 .taskText0,#mermaid-1588232496574 .taskText1,#mermaid-1588232496574 .taskText2,#mermaid-1588232496574 .taskText3{fill:#fff}#mermaid-1588232496574 .task0,#mermaid-1588232496574 .task1,#mermaid-1588232496574 .task2,#mermaid-1588232496574 .task3{fill:#487e3a;stroke:#13540c}#mermaid-1588232496574 .taskTextOutside0,#mermaid-1588232496574 .taskTextOutside2{fill:#000}#mermaid-1588232496574 .taskTextOutside1,#mermaid-1588232496574 .taskTextOutside3{fill:#000}#mermaid-1588232496574 .active0,#mermaid-1588232496574 .active1,#mermaid-1588232496574 .active2,#mermaid-1588232496574 .active3{fill:#cde498;stroke:#13540c}#mermaid-1588232496574 .activeText0,#mermaid-1588232496574 .activeText1,#mermaid-1588232496574 .activeText2,#mermaid-1588232496574 .activeText3{fill:#000 !important}#mermaid-1588232496574 .done0,#mermaid-1588232496574 .done1,#mermaid-1588232496574 .done2,#mermaid-1588232496574 .done3{stroke:grey;fill:#d3d3d3;stroke-width:2}#mermaid-1588232496574 .doneText0,#mermaid-1588232496574 .doneText1,#mermaid-1588232496574 .doneText2,#mermaid-1588232496574 .doneText3{fill:#000 !important}#mermaid-1588232496574 .crit0,#mermaid-1588232496574 .crit1,#mermaid-1588232496574 .crit2,#mermaid-1588232496574 .crit3{stroke:#f88;fill:red;stroke-width:2}#mermaid-1588232496574 .activeCrit0,#mermaid-1588232496574 .activeCrit1,#mermaid-1588232496574 .activeCrit2,#mermaid-1588232496574 .activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}#mermaid-1588232496574 .doneCrit0,#mermaid-1588232496574 .doneCrit1,#mermaid-1588232496574 .doneCrit2,#mermaid-1588232496574 .doneCrit3{stroke:#f88;fill:#d3d3d3;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}#mermaid-1588232496574 .milestone{transform:rotate(45deg) scale(0.8, 0.8)}#mermaid-1588232496574 .milestoneText{font-style:italic}#mermaid-1588232496574 .doneCritText0,#mermaid-1588232496574 .doneCritText1,#mermaid-1588232496574 .doneCritText2,#mermaid-1588232496574 .doneCritText3{fill:#000 !important}#mermaid-1588232496574 .activeCritText0,#mermaid-1588232496574 .activeCritText1,#mermaid-1588232496574 .activeCritText2,#mermaid-1588232496574 .activeCritText3{fill:#000 !important}#mermaid-1588232496574 .titleText{text-anchor:middle;font-size:18px;fill:#000;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 g.classGroup text{fill:#13540c;stroke:none;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family);font-size:10px}#mermaid-1588232496574 g.classGroup text .title{font-weight:bolder}#mermaid-1588232496574 g.clickable{cursor:pointer}#mermaid-1588232496574 g.classGroup rect{fill:#cde498;stroke:#13540c}#mermaid-1588232496574 g.classGroup line{stroke:#13540c;stroke-width:1}#mermaid-1588232496574 .classLabel .box{stroke:none;stroke-width:0;fill:#cde498;opacity:0.5}#mermaid-1588232496574 .classLabel .label{fill:#13540c;font-size:10px}#mermaid-1588232496574 .relation{stroke:#13540c;stroke-width:1;fill:none}#mermaid-1588232496574 .dashed-line{stroke-dasharray:3}#mermaid-1588232496574 #compositionStart{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #compositionEnd{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #aggregationStart{fill:#cde498;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #aggregationEnd{fill:#cde498;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #dependencyStart{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #dependencyEnd{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #extensionStart{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 #extensionEnd{fill:#13540c;stroke:#13540c;stroke-width:1}#mermaid-1588232496574 .commit-id,#mermaid-1588232496574 .commit-msg,#mermaid-1588232496574 .branch-label{fill:lightgrey;color:lightgrey;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .pieTitleText{text-anchor:middle;font-size:25px;fill:#000;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 .slice{font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 g.stateGroup text{fill:#13540c;stroke:none;font-size:10px;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}#mermaid-1588232496574 g.stateGroup text{fill:#13540c;stroke:none;font-size:10px}#mermaid-1588232496574 g.stateGroup .state-title{font-weight:bolder;fill:#000}#mermaid-1588232496574 g.stateGroup rect{fill:#cde498;stroke:#13540c}#mermaid-1588232496574 g.stateGroup line{stroke:#13540c;stroke-width:1}#mermaid-1588232496574 .transition{stroke:#13540c;stroke-width:1;fill:none}#mermaid-1588232496574 .stateGroup .composit{fill:white;border-bottom:1px}#mermaid-1588232496574 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px}#mermaid-1588232496574 .state-note{stroke:#6eaa49;fill:#fff5ad}#mermaid-1588232496574 .state-note text{fill:black;stroke:none;font-size:10px}#mermaid-1588232496574 .stateLabel .box{stroke:none;stroke-width:0;fill:#cde498;opacity:0.5}#mermaid-1588232496574 .stateLabel text{fill:#000;font-size:10px;font-weight:bold;font-family:'trebuchet ms', verdana, arial;font-family:var(--mermaid-font-family)}:root{--mermaid-font-family: '"trebuchet ms", verdana, arial';--mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive}
+
+:root { --mermaid-font-family: "trebuchet ms", verdana, arial;}</style>
+  <style>#mermaid-1588232496574 {
+    color: rgb(0, 0, 0);
+    font: 16px "trebuchet ms", verdana, arial;
+  }</style>
+  <g></g>
+  <defs>
+    <marker id="extensionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto">
+      <path d="M 1,7 L18,13 V 1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="extensionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto">
+      <path d="M 1,1 V 13 L18,7 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="compositionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto">
+      <path d="M 18,7 L9,13 L1,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="compositionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto">
+      <path d="M 18,7 L9,13 L1,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="aggregationStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto">
+      <path d="M 18,7 L9,13 L1,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="aggregationEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto">
+      <path d="M 18,7 L9,13 L1,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="dependencyStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto">
+      <path d="M 5,7 L9,13 L1,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <defs>
+    <marker id="dependencyEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto">
+      <path d="M 18,7 L9,13 L14,7 L9,1 Z"></path>
+    </marker>
+  </defs>
+  <g id="classid-BaseProxy-992" class="classGroup " transform="translate(456.546875,502.078125 )">
+    <rect x="0" y="0" width="130.96875" height="109.828125"></rect>
+    <text y="15" x="0">
+      <tspan x="5">«proxy-handler»</tspan>
+      <tspan class="title" dy="10" x="5">BaseProxy</tspan>
+    </text>
+    <line x1="0" y1="31.609375" y2="31.609375" x2="130.96875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText">
+      <tspan x="5">address</tspan>
+      <tspan x="5" dy="10">parent</tspan>
+      <tspan x="5" dy="10">id</tspan>
+      <tspan x="5" dy="10">get-trap</tspan>
+      <tspan x="5" dy="10">set-trap</tspan>
+    </text>
+    <line x1="0" y1="88.21875" y2="88.21875" x2="130.96875"></line>
+    <text x="5" y="103.21875" fill="white" class="classText">
+      <tspan x="5">checkPermission()</tspan>
+    </text>
+  </g>
+  <g id="classid-ChildCache-993" class="classGroup " transform="translate(834.6796875,122.421875 )">
+    <rect x="0" y="0" width="120.1875" height="129.828125"></rect>
+    <text y="15" x="0">
+      <tspan x="15.34375">«utility»</tspan>
+      <tspan class="title" dy="10" x="15.34375">ChildCache</tspan>
+    </text>
+    <line x1="0" y1="31.609375" y2="31.609375" x2="120.1875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText">
+      <tspan x="5">cache &lt;Object&gt;</tspan>
+      <tspan x="5" dy="10">parent &lt;Object&gt;</tspan>
+      <tspan x="5" dy="10">hasChanged &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">childNodes &lt;Array&gt;</tspan>
+    </text>
+    <line x1="0" y1="78.21875" y2="78.21875" x2="120.1875"></line>
+    <text x="5" y="93.21875" fill="white" class="classText">
+      <tspan x="5">assignID(child) : &lt;void&gt;</tspan>
+      <tspan x="5" dy="10">(force-)update() &lt;void&gt;</tspan>
+      <tspan x="5" dy="10">getCache() : &lt;Object&gt;</tspan>
+      <tspan x="5" dy="10">add(child) : &lt;void&gt;</tspan>
+    </text>
+  </g>
+  <g id="classid-BaseObject-994" class="classGroup " transform="translate(431.2109375,302.25 )">
+    <rect x="0" y="0" width="181.640625" height="149.828125"></rect>
+    <text y="15" x="0">
+      <tspan x="38.75">«interface»</tspan>
+      <tspan class="title" dy="10" x="38.75">BaseObject</tspan>
+    </text>
+    <line x1="0" y1="31.609375" y2="31.609375" x2="181.640625"></line>
+    <text x="5" y="41.609375" fill="white" class="classText">
+      <tspan x="5">hidden &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">id &lt;String&gt;</tspan>
+      <tspan x="5" dy="10">uuid &lt;String&gt;</tspan>
+      <tspan x="5" dy="10">plain &lt;IEnum&gt;</tspan>
+      <tspan x="5" dy="10">isGlobalRoot &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">childCache &lt;ChildCache&gt;</tspan>
+      <tspan x="5" dy="10">get hasChildren &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">get children &lt;Array&gt;</tspan>
+    </text>
+    <line x1="0" y1="118.21875" y2="118.21875" x2="181.640625"></line>
+    <text x="5" y="133.21875" fill="white" class="classText">
+      <tspan x="5">getRelativeAddress(target) : &lt;String&gt;</tspan>
+      <tspan x="5" dy="10">addNewChild(target) : &lt;self&gt;</tspan>
+    </text>
+  </g>
+  <g id="classid-WorldObject-995" class="classGroup " transform="translate(487.59375,171.9296875 )">
+    <rect x="0" y="0" width="68.875" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">WorldObject</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="68.875"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="68.875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Realm-996" class="classGroup " transform="translate(275.484375,15 )">
+    <rect x="0" y="0" width="88.640625" height="42.421875"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="29.953125">Realm</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="88.640625"></line>
+    <text x="5" y="31.609375" fill="white" class="classText">
+      <tspan x="5">globals &lt;object&gt;</tspan>
+    </text>
+    <line x1="0" y1="38.21875" y2="38.21875" x2="88.640625"></line>
+    <text x="5" y="53.21875" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-World-997" class="classGroup " transform="translate(414.125,20.8046875 )">
+    <rect x="0" y="0" width="37.53125" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">World</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="37.53125"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="37.53125"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Isolate-998" class="classGroup " transform="translate(501.65625,20.8046875 )">
+    <rect x="0" y="0" width="40.75" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">Isolate</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="40.75"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="40.75"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Area-999" class="classGroup " transform="translate(592.40625,20.8046875 )">
+    <rect x="0" y="0" width="31.6875" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">Area</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="31.6875"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="31.6875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Room-1000" class="classGroup " transform="translate(674.09375,15 )">
+    <rect x="0" y="0" width="109.03125" height="42.421875"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="41.5">Room</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="109.03125"></line>
+    <text x="5" y="31.609375" fill="white" class="classText">
+      <tspan x="5">get exits &lt;Objects[]&gt;</tspan>
+    </text>
+    <line x1="0" y1="38.21875" y2="38.21875" x2="109.03125"></line>
+    <text x="5" y="53.21875" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-GameObject-1001" class="classGroup " transform="translate(57.34765625,171.9296875 )">
+    <rect x="0" y="0" width="67.734375" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">GameObject</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="67.734375"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="67.734375"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Exit-1002" class="classGroup " transform="translate(94.6875,0 )">
+    <rect x="0" y="0" width="130.796875" height="72.421875"></rect>
+    <text y="15" x="0">
+      <tspan x="27.484375">«cross node»</tspan>
+      <tspan class="title" dy="10" x="27.484375">Exit</tspan>
+    </text>
+    <line x1="0" y1="31.609375" y2="31.609375" x2="130.796875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText">
+      <tspan x="5">isEntranceOnly &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">isOneWay &lt;Boolean&gt;</tspan>
+      <tspan x="5" dy="10">set destination &lt;Exit&gt;</tspan>
+    </text>
+    <line x1="0" y1="68.21875" y2="68.21875" x2="130.796875"></line>
+    <text x="5" y="83.21875" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Container-1003" class="classGroup " transform="translate(833.125,15.8046875 )">
+    <rect x="0" y="0" width="123.296875" height="40.8125"></rect>
+    <text y="15" x="0">
+      <tspan x="5">«enumeration»</tspan>
+      <tspan class="title" dy="10" x="5">Container</tspan>
+    </text>
+    <line x1="0" y1="31.609375" y2="31.609375" x2="123.296875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="36.609375" y2="36.609375" x2="123.296875"></line>
+    <text x="5" y="51.609375" fill="white" class="classText"></text>
+  </g>
+  <g id="classid-Various-1004" class="classGroup " transform="translate(0,20.8046875 )">
+    <rect x="0" y="0" width="44.6875" height="30.8125"></rect>
+    <text y="15" x="0">
+      <tspan class="title" x="5">Various</tspan>
+    </text>
+    <line x1="0" y1="21.609375" y2="21.609375" x2="44.6875"></line>
+    <text x="5" y="31.609375" fill="white" class="classText"></text>
+    <line x1="0" y1="26.609375" y2="26.609375" x2="44.6875"></line>
+    <text x="5" y="41.609375" fill="white" class="classText"></text>
+  </g>
+  <path d="M22.34375,51.6171875L22.34375,59.251302083333336C22.34375,66.88541666666667,22.34375,82.15364583333333,31.855488944793205,102.20572916666667C41.36722788958641,122.2578125,60.390705779172826,147.09375,69.90244472396603,159.51171875L79.41418366875924,171.9296875" id="edge876" class="relation dashed-line" marker-end="url(#dependencyEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="-12.8125" y="104.78125" width="99.53125" height="16.625"></rect>
+    <text class="label" x="36.95248582584239" y="116.49418407147866" fill="red" text-anchor="middle">not implemented yet</text>
+  </g>
+  <path d="M160.0859375,72.421875L160.0859375,76.58854166666667C160.0859375,80.75520833333333,160.0859375,89.08854166666667,150.57419855520678,105.67317708333333C141.06245961041358,122.2578125,122.03898172082718,147.09375,112.52724277603397,159.51171875L103.01550383124076,171.9296875" id="edge877" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="119.65625" y="113.046875" width="39" height="16.609375"></rect>
+    <text class="label" x="139.1517336670393" y="124.75234427724402" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M91.21484375,202.7421875L91.21484375,215.16015625C91.21484375,227.578125,91.21484375,252.4140625,147.880859375,277.9738980513696C204.546875,303.5337336027392,317.87890625,329.81746720547835,374.544921875,342.95933400684794L431.2109375,356.1012008082175" id="edge878" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="190.0625" y="296.546875" width="69.71875" height="16.625"></rect>
+    <text class="label" x="224.92216789091736" y="308.2591299846439" fill="red" text-anchor="middle">Object-Branch</text>
+  </g>
+  <path d="M319.8046875,57.421875L319.8046875,64.08854166666667C319.8046875,70.75520833333333,319.8046875,84.08854166666667,347.76953125,103.18894936940636C375.734375,122.28935707214605,431.6640625,147.15683914429206,459.62890625,159.5905801803651L487.59375,172.0243212164381" id="edge879" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="365.921875" y="114.890625" width="39" height="16.609375"></rect>
+    <text class="label" x="385.4241816392525" y="126.59764313013935" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M432.890625,51.6171875L432.890625,59.251302083333336C432.890625,66.88541666666667,432.890625,82.15364583333333,445.2017748338257,102.20572916666667C457.51292466765136,122.2578125,482.1352243353028,147.09375,494.44637416912843,159.51171875L506.7575240029542,171.9296875" id="edge880" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="434.203125" y="106.703125" width="39" height="16.609375"></rect>
+    <text class="label" x="453.6997750551627" y="118.41157771558883" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M522.03125,51.6171875L522.03125,59.251302083333336C522.03125,66.88541666666667,522.03125,82.15364583333333,522.03125,102.20572916666667C522.03125,122.2578125,522.03125,147.09375,522.03125,159.51171875L522.03125,171.9296875" id="edge881" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="502.53125" y="100.0625" width="39" height="16.625"></rect>
+    <text class="label" x="522.03125" y="111.7734375" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M608.25,51.6171875L608.25,59.251302083333336C608.25,66.88541666666667,608.25,82.15364583333333,596.3423882939438,102.20572916666667C584.4347765878878,122.2578125,560.6195531757754,147.09375,548.7119414697194,159.51171875L536.8043297636632,171.9296875" id="edge882" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="568.875" y="106.4375" width="39" height="16.609375"></rect>
+    <text class="label" x="588.3783164207138" y="118.14525360764819" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M728.609375,57.421875L728.609375,64.08854166666667C728.609375,70.75520833333333,728.609375,84.08854166666667,699.9192708333334,103.24270583178907C671.2291666666666,122.39686999691146,613.8489583333334,147.37186499382295,585.1588541666666,159.85936249227868L556.46875,172.34685999073443" id="edge883" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="641.375" y="115.1875" width="39" height="16.625"></rect>
+    <text class="label" x="660.8772977583219" y="126.9025677227318" fill="red" text-anchor="middle">inherits</text>
+  </g>
+  <path d="M522.03125,202.7421875L522.03125,215.16015625C522.03125,227.578125,522.03125,252.4140625,522.03125,268.9986979166667C522.03125,285.5833333333333,522.03125,293.9166666666667,522.03125,298.0833333333333L522.03125,302.25" id="edge884" class="relation" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="489.203125" y="240.78125" width="65.65625" height="16.625"></rect>
+    <text class="label" x="522.03125" y="252.49609375" fill="red" text-anchor="middle">World-Branch</text>
+  </g>
+  <path d="M894.7734375,56.6171875L894.7734375,63.41796875C894.7734375,70.21875,894.7734375,83.8203125,894.7734375,94.78776041666667C894.7734375,105.75520833333333,894.7734375,114.08854166666667,894.7734375,118.25520833333333L894.7734375,122.421875" id="edge885" class="relation" marker-end="url(#compositionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="845.015625" y="77.8125" width="99.515625" height="16.609375"></rect>
+    <text class="label" x="894.7734375" y="89.51953125" fill="red" text-anchor="middle">not implemented yet</text>
+  </g>
+  <g class="cardinality">
+    <text class="type1" x="889.7734375" y="69.1171875" fill="black" font-size="6">1</text>
+  </g>
+  <g class="cardinality">
+    <text class="type2" x="904.7734375" y="109.921875" fill="black" font-size="6">n</text>
+  </g>
+  <path d="M894.7734375,252.25L894.7734375,256.4166666666667C894.7734375,260.5833333333333,894.7734375,268.9166666666667,847.7864583333334,285.67825854057065C800.7994791666666,302.4398504144747,706.8255208333334,327.6297008289493,659.8385416666666,340.22462603618663L612.8515625,352.819551243424" id="edge886" class="relation" marker-end="url(#compositionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="737.453125" y="300.09375" width="56.875" height="16.609375"></rect>
+    <text class="label" x="765.8862642880529" y="311.79838628843646" fill="red" text-anchor="middle">sub-module</text>
+  </g>
+  <g class="cardinality">
+    <text class="type1" x="889.7734375" y="264.75" fill="black" font-size="6">0</text>
+  </g>
+  <g class="cardinality">
+    <text class="type2" x="627.5144382546732" y="359.24217334059074" fill="black" font-size="6">1</text>
+  </g>
+  <path d="M522.03125,452.078125L522.03125,456.2447916666667C522.03125,460.4114583333333,522.03125,468.7447916666667,522.03125,477.078125C522.03125,485.4114583333333,522.03125,493.7447916666667,522.03125,497.9114583333333L522.03125,502.078125" id="edge887" class="relation dashed-line" marker-end="url(#extensionEnd)"></path>
+  <g class="classLabel">
+    <rect class="box" x="494.484375" y="465.375" width="55.09375" height="16.609375"></rect>
+    <text class="label" x="522.03125" y="477.078125" fill="red" text-anchor="middle">wrapped in</text>
+  </g>
+  <g class="cardinality">
+    <text class="type1" x="517.03125" y="464.578125" fill="black" font-size="6">1</text>
+  </g>
+</svg>

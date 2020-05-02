@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "inquirer": "^7.1.0"
+    "inquirer": "^7.1.0",
+    "mdx": "^0.3.1",
+    "mermaid": "^8.5.0"
   },
   "description": "small PoC creating the entire object-structure using ES6 classes and mapping parent-child relation with a customized instance of the NodeJS path-module to create IPv6-like addresses and scopes.",
   "devDependencies": {
