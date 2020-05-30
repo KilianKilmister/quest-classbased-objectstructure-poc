@@ -1,13 +1,6 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
-![GitHub](https://img.shields.io/github/license/kiliankilmister/quest-classbased-objstructure-poc)
-[![Issues](https://img.shields.io/github/issues-raw/kiliankilmister/quest-classbased-objstructure-poc.svg?maxAge=25000)](https://github.com/kiliankilmister/quest-classbased-objstructure-poc/issues)
-[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-![GitHub contributors](https://img.shields.io/github/contributors/kiliankilmister/quest-classbased-objstructure-poc.svg?style=flat)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/kiliankilmister/quest-classbased-objstructure-poc.svg?style=flat)
-![node](https://img.shields.io/node/v/@slick_kilmister/quest-classbased-objstructure-poc)<br>
 [![standard]][standardl]
-[![NPM](https://nodei.co/npm/@slick_kilmister/quest-classbased-objstructure-poc.png?downloads=true)](https://www.npmjs.com/package/@slick_kilmister/quest-classbased-objstructure-poc)
 
 
 | [Link to QuestJS-Repo][Quest] | [Link to GitHub-Repo][repo] | [Link to GitHub-Pages][pages] | [Link to NPM-Package][NPM] |
