@@ -54,11 +54,15 @@ upon.
 They can be used by running `bin/ex.js` and selecting the respective options when
 prompted. You can also run it without installing using **NPX**. Besides the
 console output it also writes a (massively shortened) JSON representation of the Game-Structure to a
-file and saves it in the Current Working Directory.
+file and saves it in the Current Working Directory. You can also install it
+globally and run it with `quest-runexample` from the commandline
 
 ```sh
 # NPX Command
 npx @slick_kilmister/quest-classbased-objstructure-poc
+
+# To run from the commandline
+npm install @slick_kilmister/quest-classbased-objstructure-poc -g
 ```
 
 
