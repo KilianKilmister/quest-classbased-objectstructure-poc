@@ -48,7 +48,7 @@
 A strict inheritance model to optimise runtime-execution and makes the program act
 more predictable. Currently it consists of two branches inheriting from a single
 Node. They are currently mostly representational but can easily be expanded
-upon. [See the Class-Module for more details][Class-Module]
+upon.
 
 [Class-Module]:<class-module.md>
 

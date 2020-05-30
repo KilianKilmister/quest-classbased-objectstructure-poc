@@ -1,7 +1,7 @@
 # Proof of Concept for Rebasing the Core Object Structure on Prototype Inheritance
 
 | [Link to QuestJS-Repo][Quest]                               | [Link to GitHub-Repo][repo] |
-|-------------------------------------------------------------|-----------------------------|
+| ----------------------------------------------------------- | --------------------------- |
 | [Link to GitHub-Pages][pages]<br>[Link to NPM-Package][NPM] | [![standard]][standardl]    |
 
 [Quest]:<https://github.com/ThePix/QuestJS>
@@ -38,7 +38,7 @@
 A strict inheritance model to optimise runtime-execution and makes the program act
 more predictable. Currently it consists of two branches inheriting from a single
 Node. They are currently mostly representational but can easily be expanded
-upon.  
+upon.
 The two branches are: (names are subject to change)
 
 
@@ -76,7 +76,7 @@ object. Generates 32 objects in a few milliseconds
 
 
 Both Tasks write the resulting Root-Object to a `JSON` file (heavily shortened to
-a depth of about 5).  
+a depth of about 5).
 The API is (albeit messy) fully exposed and ready to be experimented upon. This
 PoC is also available as an NPM package that can can be downloaded and used as
 a dependency.
@@ -113,7 +113,7 @@ The `Proxy` serves three main purposes:
    read the object.
 3. Being Native-`Code`, they are incredibly efficient and with some simple
    `boolean`-pre-triggers they cause close to zero additional processing time and
-   (when correctly configured) are basically impossible to circumvent.  
+   (when correctly configured) are basically impossible to circumvent.
    Case-and-Point: ALL objects in the example scripts are wrapped by a
    `proxy`.
    And the design of the logging-to-console has more effect on execution speed than all
@@ -135,7 +135,7 @@ runtime smoother.
 this PoC comes with a fully functional Address-module based on the NodeJS
 `path`-module. It currently features construction of the Absolute Address of an
 Object and resolving of relative addresses by only giving it start- and
-target-Object.  
+target-Object.
 It is designed after IPv6, every parent acting as a DNS for its direct children.
 Each parent assigns a in-scope-unique HEX-based ID to each of it's children at their
 creation (or relocation). These are then joined by a `:` giving an easy to read
@@ -144,7 +144,7 @@ Relative addresses are prefixed with a letter representing the scope of the last
 common ancestor. eg: `A:1:207` (the `capital A` indicating that both objects are
 within the same area) this adds a layer of isolation as a local control-node
 (like a room or container) does not need access or knowledge of its own
-position to guide scoping within itself.  
+position to guide scoping within itself.
 Addresses can be accessed by the `.address`-getter/trap or
 the `.getRelativeAddress(target)`-method
 
@@ -152,7 +152,7 @@ the `.getRelativeAddress(target)`-method
 ### Examples Pulled from the Showcase-Script
 
 | represented by |            ROOT |            Realm |           World |           Area |           room |
-|----------------|----------------:|-----------------:|----------------:|---------------:|---------------:|
+| -------------- | --------------: | ---------------: | --------------: | -------------: | -------------: |
 | leading-       |             `:` |              `R` |             `W` |            `A` |            `r` |
 | -----x------   | -------x------- | -------x-------- | -------x------- | -------x------ | -------x------ |
 | from           |   `:0:2:3:3:a8` |   `:0:2:2:1:22c` |  `:0:2:2:2:32e` |  `:0:2:2:4:52` | `:0:2:7:1:1d0` |
@@ -172,7 +172,7 @@ Every object is assigned a unique UUID at creation and is indexed with it.
 contrary to the ID used in the Address-module, the object keeps this one
 regardless of location and the UUID won't be given free at object destruction.
 This is a simple way to guarantee persistance of object-connections. eg: lock
-and key relation.  
+and key relation.
 The UUID-Creator is simple and can be tweaked if necessary. Currently it
 guarantees uniqueness and generates a HEX-base ID of `8+4+4`-digits.
 eg: `4e71fff5-1757-1dc0`
@@ -183,16 +183,16 @@ eg: `4e71fff5-1757-1dc0`
 The ChildCache-Object allows for some basic caching. It's based on an
 independent class outside the inheritance tree as a refracturing measure.
 It works as a mixin of sort and is created when first needed. So objects without
-any children don't try to start caching  
+any children don't try to start caching
 It's not really supposed to be directly accessed but works as an extension of
 the base-class. Its methods being mainly used by the parent object. and serving
 as a Node to quickly easily connect (grand-)children to their respective
-container.  
+container.
 It currently features some ultra basic caching working as a data-base for the
 getters of the main Object. The caching is bare-bones and needs optimization,
-but as-is it could already serve specific data to their matching getters.  
+but as-is it could already serve specific data to their matching getters.
 It could keep the matching data ready to serve for various containers of an
 object. eg: a table with a hidden compartment (separating on-top, and
-compartment) or an (N-)PC inventory (separating held-, worn-, stored- etc. items).  
+compartment) or an (N-)PC inventory (separating held-, worn-, stored- etc. items).
 This makes it easy for programmatic-logic to follow game-logic as it could
 easily handle visibility, accessability or unlock-requirements within the parent object directly.

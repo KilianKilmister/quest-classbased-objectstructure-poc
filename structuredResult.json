@@ -1,0 +1,60 @@
+{
+  "id": "ROOT",
+  "isGlobalRoot": true,
+  "plain": "root",
+  "uuid": "ROOT",
+  "childCache": {
+    "cache": {
+      "a3f0c6c4-c240-cdfc": "{ realm }",
+      "87dbb804-cabf-2ee7": "{ world }",
+      "a00f0fee-bab5-a763": "{ area }",
+      "b624cae6-53d0-c36e": "{ room }",
+      "ad93fb0a-6a9e-4e21": "{ exit }",
+      "c9c7e5d1-7050-f7b9": "{ isolate }",
+      "75130ace-b68b-f61a": "{ world }",
+      "78166268-5b44-674c": "{ area }",
+      "7a53caaa-f08b-4788": "{ room }",
+      "dcc345c5-d554-af94": "{ exit }",
+      "e6c01488-464e-04cd": "{ area }",
+      "b84c86f0-255e-8e0d": "{ room }",
+      "29fa254b-e021-4583": "{ exit }",
+      "6d92781a-3127-eace": "{ room }",
+      "beb27d02-4799-f2fe": "{ exit }",
+      "2e233c8f-0825-3c83": "{ gameObject }",
+      "13217998-86c1-0e34": "{ gameObject }",
+      "831b4aa7-9aff-7c29": "{ room }",
+      "d02720cb-3668-3409": "{ exit }",
+      "aa37691a-f803-b068": "{ gameObject }",
+      "ebbf4e5d-acfe-c220": "{ gameObject }",
+      "1108c0ee-89a7-cd58": "{ area }",
+      "919e0943-63e3-80a0": "{ room }",
+      "71bdf38c-4f43-1a4d": "{ exit }",
+      "fb479955-4987-2a45": "{ room }",
+      "5bbd2105-62a8-eedf": "{ exit }",
+      "8264b1c9-f967-155b": "{ gameObject }",
+      "6c77bd09-95ca-0e34": "{ gameObject }",
+      "66e1c5db-946a-07ef": "{ room }",
+      "3150dfa6-ae00-11f0": "{ exit }",
+      "14bbdc69-4190-12f8": "{ gameObject }",
+      "70ba990d-0097-5ab4": "{ gameObject }"
+    },
+    "hasChanged": false,
+    "childNodes": [
+      {
+        "plain": "realm",
+        "uuid": "a3f0c6c4-c240-cdfc",
+        "globals": {},
+        "childCache": {
+          "cache": "...(omitted for size)",
+          "hasChanged": false,
+          "childNodes": [
+            "{ world }",
+            "{ isolate }",
+            "{ world }"
+          ]
+        },
+        "id": "0"
+      }
+    ]
+  }
+}

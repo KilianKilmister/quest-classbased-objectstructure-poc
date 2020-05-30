@@ -11,13 +11,6 @@
   - [Simple UUID-Creation-Module][8]
   - [Basic Caching of Child-Objects][9]
 
-- [Class-Module](class-module.md)
-  - [Prototype Inheritance](/class-module#prototype-inheritance)
-  - [Base Proxy](/class-module#base-proxy)
-  - [Child Cache](/class-module#child-cache)
-  - [Game Instance](/class-module#game-instance)
-  - [Enums](/class-module#enums)
-
 [0]:</#proof-of-concept-for-rebasing-the-core-object-structure-on-prototype-inheritance>
 [1]:</#es6-class-based-inheritance>
 [2]:<#game-skeleton-overhaul>
